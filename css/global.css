@@ -1,0 +1,533 @@
+html,body{
+    font-family: 'STHeiti';
+}
+p,div,h2{
+    padding: 0;
+    margin: 0;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {display: inline-table;}
+* html .clearfix {
+    height:1%;
+}
+*+html .clearfix {
+    height:1%;
+}
+.clearfix {
+    display:block;
+}
+
+.css-hide{
+    display: none;
+}
+.css-show{
+    display: block;
+}
+*:focus {outline: none;}
+body{
+    width: 940px;
+    margin: 0 auto;
+}
+section{
+    color: #535353;
+    position:relative;
+    height: auto;
+    display: none;
+}
+section p{
+    padding: 5px 0;
+}
+section.current{
+    display: block;
+}
+section .logo{
+    position: absolute;
+    top:60px;
+}
+section .store{
+    position: absolute;
+    top: 0;
+    text-align: right;   
+}
+section .store a{ 
+    color: #fff;
+    text-decoration: none;
+    text-align: right;
+}
+section p.activity {
+    
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right :0;
+    padding:12px 12px 0 0;
+
+}
+
+section .nav-btn{
+    position: absolute;
+    top:285px;
+    display: block;
+    z-index: 999;
+}
+#nav-left-btn{
+    left:0;
+}
+#nav-right-btn{
+    right: 0;
+}
+
+section div{
+    width: 100%;
+    text-align: center;
+}
+section .top{
+    top: 120px;
+    position: absolute;
+    width:100%;
+    padding-bottom: 15px;
+}
+section .top h2{
+    font-size:32px;
+    font-weight: normal;
+}
+section .top p{
+    font-size: 28px;
+}
+section .bottom{
+    position: absolute;
+}
+section .bottom-wrap{
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+}
+
+
+/* section */
+section .lotus1 img {
+    position: absolute;
+    top: 200px;
+    left: 210px;
+
+}
+section .lotus2 img {
+    position: absolute;
+    top: 214px;
+    right: 244px;
+
+}
+section .lotus3 img {
+    position: absolute;
+    top: 310px;
+    left: 30px;
+
+}
+section .lotus4 img {
+    position: absolute;
+    top: 356px;
+    left: 310px;
+
+}
+section .lotus5 img {
+    position: absolute;
+    top: 250px;
+    left: 350px;
+
+}
+section .lotus6 img {
+    position: absolute;
+    top: 310px;
+    right: 65px;
+
+}
+
+section .introduction {
+    position: absolute;
+    top: 570px;
+    
+}
+section .introduction p {
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+section .introduction span.purple{
+    color: #9cacd8;
+}
+
+
+.bottom-wrap img{
+    position: absolute;
+    display: none;
+}
+.bottom-wrap img.product{
+    display: block;
+}
+.bottom-wrap span{
+    position: absolute;
+    top:0;
+    left:-500px;
+}
+.bottom-wrap h2{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* home */
+
+/* reason*/
+
+#reason{
+    font-size:16px;
+}
+#reason .top{
+    top: 120px;
+    position: absolute;
+    border-bottom: #535353 1px solid;
+    width:600px;
+    margin-left:170px;
+    margin-right: 170px;
+    padding-bottom: 5px;
+}
+#reason .top p{
+    font-size:16px;
+}
+#reason .bottom{
+    top:200px;
+}
+#reason h2{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    font-weight: normal;
+}
+#reason .bottom-wrap img{
+    position: absolute;
+}
+#reason .bottom-wrap span{
+    position: absolute;
+    font-size:17px;
+    display: none;
+    border-bottom:#535353 1px solid;
+}
+#reason img.hj{
+    left:240px;
+    top:89px;
+}
+#reason img.gz{
+    left:622px;
+    top:242px;
+}
+#reason img.dn{
+    left:640px;
+    top:138px;
+}
+#reason img.ys{
+    left:200px;
+    top:207px;
+}
+#reason img.qh{
+    left:282px;
+    top:316px;
+}
+
+#reason span.hj{
+    font-size:28px;
+    left:370px;
+    top:115px;
+}
+#reason span.dn{
+    font-size:24px;
+    left:540px;
+    top:170px;
+}
+#reason span.ys{
+    font-size:25px;
+    left:320px;
+    top:235px;
+}
+#reason span.qh{
+    font-size:26px;
+    left:385px;
+    top:343px;
+}
+#reason span.gz{
+    font-size:31px;
+    left:495px;
+    top:280px;
+}
+#reason img.product{
+    top:265px;
+    left:750px;
+}
+
+
+/* source */
+
+#source .top{
+    top: 140px;
+}
+#source .top h2{
+    font-size: 35px;
+    font-weight: normal;
+    color: #535353;
+}
+#source .bottom{
+    top:190px;
+}
+#source img.pm{
+    left:245px;
+    top:34px;
+}
+#source img.yyht{
+    left:414px;
+    top:45px;
+}
+#source img.eyhl{
+    left:187px;
+    top:228px;
+}
+#source img.cy{
+    left:522px;
+    top:94px;
+}
+#source img.yc{
+    left:634px;
+    top:228px;
+}
+#source img.bottom-icon{
+    left:292px;
+    top:180px;
+}
+#source img.product{
+    top:275px;
+    left:750px;
+}
+#source .explain{
+    position: relative;
+    top:398px;
+    left:0;
+}
+#source .explain p{
+    font-size: 16px;
+    line-height: 25px;
+    padding:0 ;
+}
+
+/* video */
+
+#video .top p{
+    font-size:28px;
+}
+#video .bottom{
+    bottom:60px ;
+}
+#video .bottom-wrap p{
+}
+
+
+/* product */
+#product .product1 img {
+    position: absolute;
+    z-index: 10;
+    top: 246px;
+    left: 116px;
+}
+
+#product .product2 img {
+    position: absolute;
+    z-index: 10;
+    top: 214px;
+    left: 440px;
+}
+#product .product3 img {
+    position: absolute;
+    z-index: 10;
+    top: 306px;
+    right: 106px;
+}
+#product .purplebox {
+    width: 208px; 
+    height: 84px;
+    color: #fff; 
+}
+#product .purplebox .purplemask{
+    opacity: 0.57;
+    background-color: #9cacd8;
+    width: 100%; 
+    height:100%;
+    position: absolute; 
+    left: 0; 
+    top:0;
+}
+
+.product1 .purplebox {
+    position: absolute;
+    z-index: 20;
+    top: 462px;
+    left: 40px;
+}
+.product2 .purplebox {
+    position: absolute;
+    z-index: 20;
+    top: 462px;
+    left: 360px;   
+}
+.product3 .purplebox {
+    position: absolute;
+    z-index: 20;
+    top: 462px;
+    right: 60px;   
+}
+.purple_con { 
+    position: relative; 
+    z-index: 2; 
+}
+.purple_con h1 {
+    font-size: 16px;
+
+}
+.purple_con p {
+    font-size: 12px;
+    margin: -10px 0px 0px 0px;
+    line-height: 150%;
+
+}
+
+
+/* share */
+
+#share p{
+    font-size: 14px;
+}
+#share .top{
+    top:115px;
+}
+#share .top h2{
+    font-weight: normal;
+}
+#share .top p{
+    padding:2px;
+    font-size: 16px;
+}
+#share .intro-wrap{
+    width:670px;
+    margin:20px auto;
+}
+#share .wx{
+    float: left;
+    width:142px;
+    padding:0 20px 0 100px;
+    border-right:#FFFFFF 1px solid ;
+}
+#share .intro{
+    float: right;
+    width: 390px;
+}
+#share .intro p{
+    text-align: left;
+    line-height:26px ;
+}
+#share .intro p.tip{
+    font-size: 23px;
+    font-weight: bold;
+}
+#share .intro .friend-num{
+    color: #2f7dab;
+    font-size: 24px;
+    text-decoration: underline;
+}
+#share textarea.share{
+    font-size: 14px;
+    line-height: 22px;
+    padding:10px;
+    color: #535353;
+    background-color: #c9d3e5;
+    border:#afc2d8 3px solid;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    width: 670px;
+    height: 48px;
+    max-width: 670px;
+    resize: none;
+}
+
+/* friend-list */
+#friend-list{
+    width:760px;
+    margin: 0 auto;
+}
+#friend-list .tip{
+    font-size: 20px;
+    text-align: left;
+    padding:10px 10px 10px 0;
+}
+#friend-list .carousel{
+    width: 690px;
+    overflow: hidden;
+    height: 62px;
+}
+#friend-list ul{
+    margin: 0;
+    padding: 0;
+}
+#friend-list .prev,#friend-list .next{
+    float: left;
+    display: block;
+    width: 18px;
+    height: 62px;
+}
+#friend-list .carousel{
+    float: left;
+    margin-left:33px;
+}
+#friend-list li{
+    float: left;
+    background-color: #7ecef4;
+    width: 60px;
+    height: 60px;
+    margin-right: 22px;
+    list-style: none;
+    border:1px solid #3580ad;
+    position: relative;
+}
+#friend-list li .checked{
+    position: absolute;
+    top:0;
+    right: 0;
+    display: none;
+}
+
+#friend-list li.unselected{
+    border-color:#FFFFFF;
+}
+#friend-list li.unselected .checked{
+    display: none;
+}
+#friend-list li.selected{
+    border-color:#000;
+}
+#friend-list li.selected .checked{
+    display: inherit;
+}
+#share-btn{
+    margin: 30px auto 0 auto ;
+    display:block;
+    width: 151px;
+    height: 42px;
+    background-image: url(../img/share/share-btn.png);
+}
+
