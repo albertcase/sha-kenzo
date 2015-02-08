@@ -605,3 +605,104 @@ section .con .firstrule span{
     background-image: url(../images/share/share-btn.png);
 }
 
+/* form */
+#form .lotus3 img{
+    position: absolute;
+    top: 360px;
+    left: 0;
+}
+#form .lotus5 img{
+    position: absolute;
+    left: 0;
+    top: 495px;
+}
+#form .lotus6 img{
+    position: absolute;
+    right: 0;
+    top: 495px;
+}
+#form .form_con{
+    position: absolute;
+    top:150px;
+    font-size: 14px;
+    color: #fff;
+}
+#form .form_con p{
+    line-height: 150%;
+}
+#form .formcontent ul{
+    width: 358px;
+    height: 279px;
+    position: absolute;
+    top: 220px;
+    left: 270px;
+    background-image: url(../images/form/form_bg_one.png); 
+
+}
+#form .formcontent ul li{
+    list-style-type: none;
+    position: absolute;
+    z-index: 99;
+
+}
+#form .formcontent p.info{
+    color: #fff;
+    text-align: left;
+    margin: 10px 0px 0px 20px;
+    font-size: 18px;
+
+}
+#form .formcontent p.info-one{
+    color: #fff;
+    text-align: left;
+    margin: 75px 0px 0px 20px;
+    font-size: 18px;
+    width:300px;
+    height:49px;
+}
+#form .formcontent p.info-two{
+    color: #fff;
+    text-align: left;
+    margin: 140px 0px 0px 20px;
+    font-size: 18px;
+    width:300px;
+    height:49px;
+}
+#form .formcontent p.info-three{
+    color: #fff;
+    text-align: left;
+    margin: 205px 0px 0px 20px;
+    font-size: 18px;
+    width:300px;
+    height:49px;
+}
+#form .formcontent .imgone {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+}
+#form .formcontent .imgtwo {
+    position: absolute;
+    top: 80px;
+    left: -20px;
+}
+#form .formcontent .imgthree {
+    position: absolute;
+    top: 140px;
+    left: -20px;
+}
+#form .formcontent .imgfour {
+    position: absolute;
+    top: 205px;
+    left: -20px;
+}
+#submit-btn{
+    position: absolute;
+    bottom: 40px;
+    left: 400px;
+    width: 151px;
+    height: 42px;
+    background-image: url(../images/form/submit-btn.png);
+}
+
+
