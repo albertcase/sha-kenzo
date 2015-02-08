@@ -163,6 +163,55 @@ section .introduction p {
 section .introduction span.purple{
     color: #9cacd8;
 }
+/* rulebox */
+section .rulebox {
+    display: none;
+    width: 846px;
+    height: 460px;
+    background-color: #fff;
+    position: absolute;
+    top: 170px;
+    left: 47px;
+    z-index:100;
+    opacity: .95;
+}
+section .close {
+    float: right;
+    clear: both;
+    width: 100%;
+    text-align: right;
+    margin: 6px 6px 0px 0px;
+
+    
+}
+section .con h1{
+    font-size: 25px;
+    color: #9cacd8;
+    font-weight: normal;
+}
+section .con h2{
+    font-size: 24px;
+    color: #000;
+    font-weight: normal;
+    margin-top: -10px;
+}
+section .con h3{
+    font-size: 15px;
+    color: #000;
+    font-weight: normal;
+
+}
+section .con .firstrule{
+    margin-top: 30px;
+    font-size: 15px;
+}
+section .con .firstrule p{
+    line-height: 150%;
+}
+section .con .firstrule span{
+    color: #9cacd8;
+}
+
 
 
 .bottom-wrap img{
@@ -185,7 +234,7 @@ section .introduction span.purple{
     font-weight: bold;
 }
 
-/* home */
+
 
 /* reason*/
 
@@ -406,6 +455,7 @@ section .introduction span.purple{
     line-height: 150%;
 
 }
+
 
 
 /* share */
