@@ -139,6 +139,7 @@ section .lotus6 img {
 section .introduction {
     position: absolute;
     top: 570px;
+    opacity: 0;
     
 }
 section .introduction p {
@@ -151,6 +152,26 @@ section .introduction p {
 section .introduction span.purple{
     color: #9cacd8;
 }
+
+section .introduction1 {
+    position: absolute;
+    top: 570px;
+    opacity: 0;
+    
+}
+section .introduction1 p {
+    font-size: 14px;
+    line-height: 140%;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+section .introduction1 span.purple{
+    color: #9cacd8;
+}
+
+
+
 /* rulebox */
 section .rulebox {
     display: none;
@@ -377,7 +398,7 @@ section .con .firstrule span{
 
 
 /* product */
-#product .product1 img {
+#index .product1 img {
     position: absolute;
     z-index: 10;
     top: 246px;
@@ -696,7 +717,7 @@ section .con .firstrule span{
     top: 205px;
     left: -20px;
 }
-#submit-btn{
+.submit-btn{
     position: absolute;
     bottom: 40px;
     left: 400px;
@@ -705,4 +726,107 @@ section .con .firstrule span{
     background-image: url(../images/form/submit-btn.png);
 }
 
+/* question */
+#question .scan {
+    position: absolute;
+    top: 175px;
+    left: -160px;
+    
+
+}
+#question .scan img {
+    margin-right: 10px;
+}
+#question .scan_con{
+    position: absolute;
+    top: 155px;
+    color: #fff;
+    text-align: left;
+    left:440px;
+
+}
+#question .scan_con h1{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#question .scan_con p{
+    font-size: 12px;
+    line-height: 150%;
+    margin-top: -10px;
+}
+#question .scan_con span {
+    color: #9cacd8;
+}
+
+
+#question .question_con {
+    width: 502px; 
+    height: 70px;
+    color: #fff; 
+}
+#question .question_con .question_mask{
+    opacity: 0.57;
+    background-color: #9cacd8;
+    width: 502px; 
+    height: 70px;
+    position: absolute; 
+    top: 500px;
+    left: 230px;
+
+}
+#question .question_mask_con h1{
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 495px;
+    left: 250px;
+    font-weight: normal;
+}
+#question .question_mask_con .cs{
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 540px;
+    left: 320px;
+    font-weight: normal;
+
+}
+#question .question_mask_con .radio_cs{
+    position: absolute;
+    top: 545px;
+    left: 300px;
+
+}
+#question .question_mask_con .sf{
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 540px;
+    left: 470px;
+    font-weight: normal;
+
+}
+#question .question_mask_con .radio_sf{
+    position: absolute;
+    top: 545px;
+    left: 450px;
+
+}
+#question .question_mask_con .yy{
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 540px;
+    left: 620px;
+    font-weight: normal;
+
+}
+#question .question_mask_con .radio_yy{
+    position: absolute;
+    top: 545px;
+    left: 600px;
+
+
+}
 
