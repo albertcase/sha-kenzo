@@ -32,7 +32,7 @@
             $("#home .product1 .purplebox").animate({"opacity":1}, 3000);
             num += 1; 
             if (num==3){
-                $('#nav-right-btn').animate({"opacity":1}, 6000);
+                $('#nav-right-btn').animate({"opacity":1}, 7000);
             } 
 
         });
@@ -46,11 +46,11 @@
             $("#home .product2 .purplebox").animate({"opacity":1}, 3000);     
             num += 1; 
             if (num==3){
-                $('#nav-right-btn').animate({"opacity":1}, 6000);
+                $('#nav-right-btn').animate({"opacity":1}, 7000);
             }  
         });
 
-         $('.lotus6').on('click', function(){
+        $('.lotus6').on('click', function(){
             if($(this).hasClass("hover")) 
                 return false;
             $(this).addClass("hover");
@@ -59,9 +59,43 @@
             $("#home .product3 .purplebox").animate({"opacity":1}, 3000);
             num += 1; 
             if (num==3){
-                $('#nav-right-btn').animate({"opacity":1}, 6000);
+                $('#nav-right-btn').animate({"opacity":1}, 7000);
             }  
         }); 
+
+
+
+
+        $(".checkbox").on('click', function(){
+            if($(this).hasClass("hover")){
+              $(".checkbox").removeClass("hover");
+            }
+            else{
+              $(".checkbox").removeClass("hover");
+              $(this).addClass("hover");
+           }
+        
+        });
+
+        $(".submit-btn").on('click', function(){
+            var titleName=$(".checkbox.hover").attr("title");
+            if(titleName=="白莲盛放"&&titleName!=""){
+                location.href="form.html";
+
+            }else {
+                $("#question").addClass("hover");
+                $( ".tips" ).css( 'display', 'block');
+                window.setTimeout(function(){
+                    location.href="index.html";
+                }, 2000);
+
+        
+                
+            }    
+
+        });
+
+
 
     })
 })(jQuery)

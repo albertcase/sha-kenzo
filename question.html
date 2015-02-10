@@ -14,9 +14,13 @@
 
 <body>
 <section id="question" class="current">
+    <div class="bgmask">
+
+    </div>    
     <div class="bg">
         <img src="images/question/bg-1.jpg">
     </div>
+
 
     <div class="store">
         <img src="images/storebg.png">
@@ -75,19 +79,17 @@
             <h1>您看到的画面是：</h1>
             <ul>
                 <li>
-                    <input type="radio" name="answer" class="radio_cs" value="wrong1"/>
+                    <div class="checkbox radio_cs" title="白莲出水"></div>
                     <p class="cs">白莲出水</p>
                 </li>
                 <li>
-                    <input type="radio" name="answer" class="radio_sf" value="corrent"/>
+                    <div class="checkbox radio_sf" title="白莲盛放"></div>
                     <p class="sf">白莲盛放</p>
                 </li>
                 <li>
-                    <input type="radio" name="answer" class="radio_yy" value="wrong2"/>
+                    <div class="checkbox radio_yy" title="白莲摇曳"></div>
                     <p class="yy">白莲摇曳</p>
                 </li>
-
-
 
             </ul>   
         </div>     
@@ -95,7 +97,7 @@
 
     </div>    
     
-
+    
     
     <div>
         <a href="javascript:void(0);" class="submit-btn" class="disable"></a>
@@ -108,6 +110,9 @@
     </a>
 
 </section>
+<div class="tips">
+    <p>回答错误&nbsp;请再次探索KENZO的秘密吧</p>
+</div>
 
 </body>
 </html>
