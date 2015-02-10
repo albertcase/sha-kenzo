@@ -396,6 +396,7 @@ section .con .firstrule span{
     top: 246px;
     left: 116px;
     opacity: 0;
+    display: none;
 }
 
 #home .product2 img {
@@ -404,6 +405,7 @@ section .con .firstrule span{
     top: 214px;
     left: 440px;
     opacity: 0;
+    display: none;
 }
 #home .product3 img {
     position: absolute;
@@ -411,6 +413,7 @@ section .con .firstrule span{
     top: 306px;
     right: 106px;
     opacity: 0;
+    display: none;
 }
 #home .purplebox {
     width: 208px; 
