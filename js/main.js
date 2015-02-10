@@ -77,15 +77,17 @@
         
         });
 
-        $(".submit-btn").on('click', function(){
+        $("#question .submit-btn").on('click', function(){
             var titleName=$(".checkbox.hover").attr("title");
-            if(titleName=="白莲盛放"&&titleName!=""){
+            if(titleName==null||titleName=="")return false;
+            if(titleName=="白莲盛放"){
                 location.href="form.html";
 
             }else {
                 $("#question").addClass("hover");
                 $( ".tips" ).css( 'display', 'block');
-                window.setTimeout(function(){
+                
+                setTimeout(function(){
                     location.href="index.html";
                 }, 2000);
 
@@ -95,6 +97,9 @@
 
         });
 
+        $("#form .sumbit-btn").on('click',function(){
+
+        });
 
 
     })
