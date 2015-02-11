@@ -4,18 +4,43 @@
     	/* 首页动画 */
         function homepage(){
         	$(".pagecon").animate({"opacity":1},500);
-	        $(".pf-1").animate({"opacity":1},900);
-	        $(".pf-2").animate({"opacity":1},600);
-	        $(".pf-3").animate({"opacity":1},1500);
+	        $(".pf-1").animate({"opacity":1},1300);
+	        $(".pf-2").animate({"opacity":1},1000);
+	        $(".pf-3").animate({"opacity":1},1600);
 	        $(".pagefooter h2").eq(0).stop().animate({"opacity":1,"top":0},1000);
 	        setTimeout(function(){
                  $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-6px"},200);
-                 $(".pagefooter h2").eq(1).stop().animate({"opacity":1,"top":6},1000,function(){
-                 	$(".pageArr").stop().animate({"opacity":1,"right":0});
-                 });
+                 $(".pagefooter h2").eq(1).stop().animate({"opacity":1,"top":6},1000);
 	        },5000)
         }
         homepage()
+        
+
+        function sharePage(){
+            $(".flower-1").css({"left":136,"top":152});
+        }
+        
+        sharePage()
+        
+        var curlit = 0;
+        $(".proflower").click(function(){
+            if($(this).hasClass("hover"))return false;
+            $(this).addClass("hover");
+            var curpro_top = parseInt($(this).find(".pro").css("top"));
+            var curtext_top = parseInt($(this).find(".flowercon").css("bottom"));
+            $(this).find(".con").show().animate({"opacity":1},1200,function(){
+                curlit++;
+                $(this).siblings(".pro").show().stop().animate({"top":curpro_top+10,"opacity":1},700,function(){
+                   if(curlit == 3){
+                       $("#pageStep .pageArr").stop().animate({"opacity":1,"right":0});
+                   }
+                });
+                $(this).siblings(".flowercon").show().stop().animate({"opacity":1,"bottom":curtext_top-10},1000);
+            });
+
+        })
+
+   
 
 
         
