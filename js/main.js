@@ -98,6 +98,29 @@
         });
 
         $("#form .sumbit-btn").on('click',function(){
+            var name = document.formval.name.value;
+            var phoneNo = document.formval.phoneNo.value;
+            var addr = document.formval.addr.value;
+            var city = document.formval.city.value;
+            console.log(222);
+
+            if(name=""){
+                alert("请输入您的名字");
+                return false;
+            }
+            else if(phoneNo=""){
+                alert("请输入您的手机号");
+                return false;
+            }
+            else if(addr=""){
+                alert("请输入您的地址");
+                return false;
+            }
+            else if(city=""){
+                alert("请输入你的城市");
+                return false;
+            }
+
 
         });
 

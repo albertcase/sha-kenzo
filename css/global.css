@@ -98,6 +98,13 @@ section .nav-btn{
 #nav-right-btn{
     right: 0;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+     
 }
 
 section div{
@@ -157,6 +164,12 @@ section .introduction {
     position: absolute;
     top: 570px;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
     
 }
 section .introduction p {
@@ -174,6 +187,12 @@ section .introduction1 {
     position: absolute;
     top: 570px;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
     
 }
 section .introduction1 p {
@@ -199,7 +218,13 @@ section .rulebox {
     top: 170px;
     left: 47px;
     z-index:100;
-    opacity: .95;
+    opacity: 0.95;
+    filter: alpha(opacity=95);    
+    -moz-opacity:0.95;    
+    -khtml-opacity: 0.95;      
+    -webkit-opacity: 0.95;
+    -o-opacity: 0.95;
+    -ms-opacity: 0.95;
 }
 section .close {
     float: right;
@@ -277,6 +302,12 @@ section .con .firstrule span{
     top: 246px;
     left: 116px;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
     display: none;
 }
 
@@ -286,6 +317,12 @@ section .con .firstrule span{
     top: 214px;
     left: 440px;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
     display: none;
 }
 #home .product3 img {
@@ -294,6 +331,12 @@ section .con .firstrule span{
     top: 306px;
     right: 106px;
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
     display: none;
 }
 #home .purplebox {
@@ -301,9 +344,21 @@ section .con .firstrule span{
     height: 84px;
     color: #fff; 
     opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
 }
 #home .purplebox .purplemask{
     opacity: 0.57;
+    filter: alpha(opacity=57);    
+    -moz-opacity:0.57;    
+    -khtml-opacity: 0.57;      
+    -webkit-opacity: 0.57;
+    -o-opacity: 0.57;
+    -ms-opacity: 0.57;
     background-color: #9cacd8;
     width: 100%; 
     height:100%;
@@ -419,6 +474,12 @@ section .con .firstrule span{
 } 
 #share .share_con_word .purplemask{
     opacity: .41;
+    filter: alpha(opacity=41);    
+    -moz-opacity:0.41;    
+    -khtml-opacity: 0.41;      
+    -webkit-opacity: 0.41;
+    -o-opacity: 0.41;
+    -ms-opacity: 0.41;
     background-color: #9cacd8;
     width: 100%; 
     height:100%;
@@ -547,6 +608,12 @@ section .con .firstrule span{
     width: 398px;
     height: 49px; 
     opacity: .57;
+    filter: alpha(opacity=57);    
+    -moz-opacity:0.57;    
+    -khtml-opacity: 0.57;      
+    -webkit-opacity: 0.57;
+    -o-opacity: 0.57;
+    -ms-opacity: 0.57;
     margin-bottom: 10px;
     
 }
@@ -561,6 +628,12 @@ section .con .firstrule span{
     width: 398px;
     height: 86px;
     opacity: .57;
+    filter: alpha(opacity=57);    
+    -moz-opacity:0.57;    
+    -khtml-opacity: 0.57;      
+    -webkit-opacity: 0.57;
+    -o-opacity: 0.57;
+    -ms-opacity: 0.57;
 }
 
 .formcontent form div img {
@@ -603,7 +676,7 @@ section .con .firstrule span{
     position: relative;
     z-index: 999;
     float:left;
-    margin-top: -48px;
+    margin-top: -45px;
     margin-left: 120px;
     width:250px;
     height: 20px;
@@ -620,11 +693,12 @@ section .con .firstrule span{
     margin-top: -80px;
     margin-left: 120px;
     width:250px;
-    height: 40px;
+    height: 50px;
     overflow:hidden; 
     resize:none;
     font-size: 20px;
     color: #fff;
+    line-height: 150%;
 
 
 }
@@ -632,11 +706,11 @@ section .con .firstrule span{
     border-top: 2px #fff solid;
     border-bottom: 2px #fff solid;
     width: 250px;
-    height: 30px;
+    height: 28px;
     position: relative;
     z-index: 999;
     float: left;
-    margin-top: -60px;
+    margin-top: -55px;
     margin-left: 120px;
     
 
@@ -692,7 +766,13 @@ section .con .firstrule span{
     color: #fff; 
 }
 #question .question_con .question_mask{
-    opacity: 0.57;
+    opacity: .57;
+    filter: alpha(opacity=57);    
+    -moz-opacity:0.57;    
+    -khtml-opacity: 0.57;      
+    -webkit-opacity: 0.57;
+    -o-opacity: 0.57;
+    -ms-opacity: 0.57;
     background-color: #9cacd8;
     width: 502px; 
     height: 70px;
