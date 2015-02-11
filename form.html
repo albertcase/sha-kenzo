@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta charset="utf-8">
 <title>Kenzoki</title>
@@ -12,7 +12,30 @@
 <!--[if lt IE 9]>
 <script type="text/javascript" src="js/html5media.min.js"></script>
 <![endif]-->
-<script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script>   
+
+<!--[if (gt IE 6)&(lt IE 9)]>
+<style type="text/css">
+    #formval input{ 
+        background:#676f86; 
+    }
+    #formval textarea {
+        background:#6a7289; 
+    }    
+</style>
+<![endif]-->
+
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=44377051" type="text/javascript" charset="utf-8"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59619376-1', 'auto');
+  ga('send', 'pageview');
+
+</script>  
 </head>
 
 <body>
@@ -77,30 +100,32 @@
         <form name="formval" id="formval">
             
             <div class="infoName llk">
+                
                 <div class="formask"></div>
                 <img src="images/form/name.png" />
                 <p>姓名：</p>
-                <input type="text" name="name" />
+                <input type="text" name="name" value="" />
+
             </div>    
                  
             <div class="infoPhone llk">
                 <div class="formask"></div>
                 <img src="images/form/phone.png" />
                 <p>手机：</p>
-                <input type="tel" name="phoneNo" maxlength="11" />
+                <input type="tel" name="phoneNo" maxlength="11" value="" />
             </div>    
 
             <div class="infoAddr llk">
                 <div class="formask"></div>
                 <img src="images/form/city.png" />
                 <p>城市：</p>
-                <input type="text" name="city" />
+                <input type="text" name="city" value="" />
             </div>    
             <div class="infoCity llk">
                 <div class="formask"></div>
                 <img src="images/form/address.png" class="imgone"/>
                 <p class="infone">地址：</p>
-                <textarea name="addr" ></textarea>
+                <textarea name="addr" value="" ></textarea>
                 <div class="line"></div>
             </div>
         </form>
@@ -118,6 +143,9 @@
     </a>
 
 </section>
+<div class="tips">
+    <img src="images/form/success.png" width="25" height="25" class="tipimg"/><p>提交成功</p>
+</div>
 
 </body>
 </html>

@@ -69,7 +69,8 @@ section .logo{
 section .store{
     position: absolute;
     top: 0;
-    text-align: right;   
+    text-align: right; 
+    z-index: 9;  
 }
 section .store a{ 
     color: #fff;
@@ -309,6 +310,7 @@ section .con .firstrule span{
     -o-opacity: 0;
     -ms-opacity: 0;
     display: none;
+    
 }
 
 #home .product2 img {
@@ -351,7 +353,8 @@ section .con .firstrule span{
     -o-opacity: 0;
     -ms-opacity: 0;
 }
-#home .purplebox .purplemask{
+.purplemask{
+    background-color: #9cacd8;
     opacity: 0.57;
     filter: alpha(opacity=57);    
     -moz-opacity:0.57;    
@@ -359,12 +362,12 @@ section .con .firstrule span{
     -webkit-opacity: 0.57;
     -o-opacity: 0.57;
     -ms-opacity: 0.57;
-    background-color: #9cacd8;
     width: 100%; 
     height:100%;
     position: absolute; 
     left: 0; 
     top:0;
+    z-index: 1;
 }
 
 .product1 .purplebox {
@@ -386,8 +389,15 @@ section .con .firstrule span{
     right: 60px;   
 }
 .purple_con { 
-    position: relative; 
+    position: absolute; 
     z-index: 2; 
+    opacity: 1;
+    filter: alpha(opacity=100);    
+    -moz-opacity:1;    
+    -khtml-opacity: 1;      
+    -webkit-opacity: 1;
+    -o-opacity: 1;
+    -ms-opacity: 1;
 }
 .purple_con h1 {
     font-size: 16px;
@@ -653,12 +663,12 @@ section .con .firstrule span{
 .formcontent form div p {
     float:left;
     color: #fff;
-    position: relative;
-    z-index: 999;
     margin-top: -50px;
     margin-left: 60px;
     font-size:20px;
     font-weight: normal;
+    position: relative;
+    z-index: 999;
     
 }
 .formcontent form div .infone {
@@ -671,18 +681,20 @@ section .con .firstrule span{
     
 }
 #formval input{
-    background: none;
-    border: none;
-    position: relative;
-    z-index: 999;
     float:left;
     margin-top: -45px;
     margin-left: 120px;
     width:250px;
     height: 20px;
+    line-height: 20px;
     font-size: 20px;
     color: #fff;
-
+    display: inline-block;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1000;
+    font-family:'STHeiti';
 }
 #formval textarea {
     background: none;
@@ -698,7 +710,8 @@ section .con .firstrule span{
     resize:none;
     font-size: 20px;
     color: #fff;
-    line-height: 150%;
+    line-height: 136%;
+    font-family:'STHeiti';
 
 
 }
@@ -731,6 +744,24 @@ section .con .firstrule span{
     width: 151px;
     height: 42px;
     background-image: url(../images/form/submit-btn.png);
+}
+
+.tips .tipimg{
+    float: left;
+    left: 180px;
+    position: relative;
+    top: 18px;
+    
+    
+}
+
+#form.hover {     
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    
 }
 
 /* question */
@@ -873,6 +904,7 @@ section .con .firstrule span{
     margin-top: 22px;
     text-align: center;
 }
+
 
 #question.hover {     
     -webkit-filter: blur(2px);

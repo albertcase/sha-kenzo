@@ -81,7 +81,9 @@
             var titleName=$(".checkbox.hover").attr("title");
             if(titleName==null||titleName=="")return false;
             if(titleName=="白莲盛放"){
-                location.href="form.html";
+                setTimeout(function(){
+                    location.href="form.html";
+                }, 1000);
 
             }else {
                 $("#question").addClass("hover");
@@ -140,6 +142,12 @@
                 $(document.formval.addr).val(errtxt.addr);
                 return false;
             }
+            $("#form").addClass("hover");
+                $( ".tips" ).css( 'display', 'block');
+                
+                setTimeout(function(){
+                    location.href="index.html";
+                }, 2000);
     
 
         });
