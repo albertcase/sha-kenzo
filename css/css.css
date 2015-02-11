@@ -26,6 +26,7 @@
 	display: inline-block;
 	position: relative;
 	opacity: 0;
+    overflow: hidden;
 }
 
 .subnav{ 
@@ -263,6 +264,40 @@
 
 
 /* pageShare */
+
+.flower-4{ 
+    width: 242px; 
+    height: 150px;
+    background: url("../images/product/lotusb1.png") no-repeat;
+    top: 365px;
+    left: -142px;
+    display: none;
+    opacity: 0;
+}
+
+.flower-5{ 
+    width: 230px; 
+    height: 338px;
+    background: url("../images/product/lotusb2.png") no-repeat;
+    top: 515px;
+    left: -85px;
+    display: none;
+    opacity: 0;
+}
+
+.flower-6{ 
+    width: 242px; 
+    height: 220px;
+    background: url("../images/product/lotusb3.png") no-repeat;
+    top: 520px;
+    left: 770px;
+    display: none;
+    opacity: 0;
+}
+
+#pageShare { 
+    opacity: 0;
+}
 #pageShare .page_section{
    width: 666px;
    display: inline-block;
@@ -278,7 +313,7 @@
 	width: 190px;
 	float: left;
 	display: inline-block; 
-	margin: 0 10px 0 45px;
+	margin: 0 10px 0 50px;
 }
 
 .sharepro dd{ 
@@ -295,11 +330,11 @@
 	padding: 10px;
 	width: 660px;
 	background: rgba(156,172,216,0.57);
-    line-height: 25px;
+    line-height: 22px;
     color: #fff;
     text-align: left;
     display: inline-block;
-    margin: 35px 0 0 0;
+    margin: 56px 0 0 0;
 }
 
 .friendlist{ 
@@ -323,6 +358,7 @@
     float: left;
     display: inline-block;
     margin: 0 5px;
+    position: relative;
 }
 .friendlist_con{ 
 	width: 560px;
@@ -338,6 +374,21 @@
 	left: 0; 
 	top:0;
 }
+
+.friendlist_con li span{
+    width: 18px;
+    height: 18px;
+    background: url("../images/share/hover.png") no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.friendlist_con li.hover span{
+    display: block;
+}
+
 
 .arr_l{
     width: 18px;
@@ -367,6 +418,7 @@
 	width: 312px; 
 	margin:55px 0 0 0;
 	display: inline-block;
+    opacity: 0;
 }
 .pageDownload_con h2{
 	font-size: 21px;
