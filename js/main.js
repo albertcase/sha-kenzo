@@ -96,29 +96,86 @@
             }    
 
         });
+        
 
-        $("#form .sumbit-btn").on('click',function(){
+        var errtxt = {
+            "name" : "请输入您的姓名！",
+            "phone" : "请输入您的手机号！",
+            "checkphone" : "请填写正确手机号！",
+            "addr" : "请输入您的地址！",
+            "city" : "请输入您的城市！"
+
+        }
+        $("#submit-btn").on('click',function(){
             var name = document.formval.name.value;
             var phoneNo = document.formval.phoneNo.value;
             var addr = document.formval.addr.value;
             var city = document.formval.city.value;
-            console.log(222);
+            
+            
 
-            if(name=""){
-                alert("请输入您的名字");
+            if(name==""){
+                $(document.formval.name).addClass("errorTips");
+                $(document.formval.name).val(errtxt.name); 
+                return false;
+
+            }
+            if(phoneNo==""){
+                $(document.formval.phoneNo).addClass("errorTips");
+                $(document.formval.phoneNo).val(errtxt.phone);
                 return false;
             }
-            else if(phoneNo=""){
-                alert("请输入您的手机号");
+            if(!phoneNo.match(/13[0-9]{9}|14[0-9]{9}|15[0-9]{9}|18[0-9]{9}/)){
+                $(document.formval.phoneNo).addClass("errorTips");
+                $(document.formval.phoneNo).val(errtxt.checkphone);
                 return false;
             }
-            else if(addr=""){
-                alert("请输入您的地址");
+            if(city==""){
+                $(document.formval.city).addClass("errorTips"); 
+                $(document.formval.city).val(errtxt.city);
                 return false;
             }
-            else if(city=""){
-                alert("请输入你的城市");
+            if(addr==""){
+                $(document.formval.addr).addClass("errorTips");
+                $(document.formval.addr).val(errtxt.addr);
                 return false;
+            }
+    
+
+        });
+
+        
+        
+
+        $(".llk input[name=name]").focus(function(){
+            if($(this).val()=="请输入您的姓名！"){
+                $(this).val("");
+                $(this).removeClass("errorTips");
+            }
+        });
+        $(".llk input[name=phoneNo]").focus(function(){
+            if($(this).val()=="请填写正确手机号！"||$(this).val()=="请输入您的手机号！"){
+                $(this).val("");
+                $(this).removeClass("errorTips");
+            }
+        });
+        $(".llk input[name=city]").focus(function(){
+            if($(this).val()=="请输入您的地址！"){
+                $(this).val("");
+                $(this).removeClass("errorTips");
+            }
+        });
+        $(".llk input[name=addr]").focus(function(){
+            if($(this).val()=="请输入您的地址！"){
+                $(this).val("");
+                $(this).removeClass("errorTips");
+            }
+        });
+
+        $(".llk input").keyup(function(){
+            var curval = $(this).val();
+            if($(this).val()==""){
+                $(this).siblings(".errorTips").html(curval);
             }
 
 

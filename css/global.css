@@ -717,6 +717,13 @@ section .con .firstrule span{
 
 }
 
+#formval .errorTips{ 
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    
+}
+
 .submit-btn{
     position: absolute;
     bottom: 40px;
@@ -875,6 +882,8 @@ section .con .firstrule span{
     filter: blur(2px);
     
 }
+
+
 
 
 
