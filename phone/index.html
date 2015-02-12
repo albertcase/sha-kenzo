@@ -13,10 +13,10 @@
 <link href="/css/animate.min.css" type="text/css" rel="stylesheet" />
 <link href="/css/phone.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/zepto.min.js"></script>
+<script type="text/javascript" src="/js/touch.js"></script>
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=44377051" type="text/javascript" charset="utf-8"></script>
 </head>
-<body>
+<body id="step0">
 
 <div id="rule">
 <a href="javascript:testAnim('#rule','flipOutY',0,0);" class="close"></a>
@@ -43,37 +43,14 @@
 </div>
 </div>
 
+<a href="javascript:;" class="logo">
+  <img src="/images/logo.png" width="50%" />
+</a>
 
 
 
 <div id="dreambox">
 <div class="pagecon">
-
-<div id="rule">
-<a href="javascript:testAnim('#rule','flipOutY',0,0);" class="close"></a>
-<div class="rule_con">
-    <h2>活动规则</h2>
-    <h1>白莲探秘  双重臻礼</h1>
-    <p>>>> 活动时间：3.2-3.15</p>
-
-    <div class="step">
-       <p>第一重</p>
-       <p><em>分享本活动，即有机会赢取明星套装！</em></p>
-       <p>每日将有 <em>100</em> 名幸运粉丝，获得光采焕容滋润霜3ml+舒缓保湿调理露10ml</p>
-       <p>每日更有 <em>1 份大奖</em> ——柔肤洁面泡沫正装一份</p>
-    </div>
-
-    <div class="step">
-       <p>第二重</p>
-       <p><em>下载KENZO APP“白莲探秘”！</em></p>
-       <p>同时前往电脑端KENZO微博，打开左侧轻应用</p>
-       <p>用APP扫描页面绿框中的花苞，回答你看到的画面，探索KENZO的秘密</p>
-       <p>回答正确后即可获得舒缓水润保湿霜5ml一份</p>
-    </div>
-
-</div>
-</div>
-
 
 
 <div class="subnav">
@@ -82,14 +59,9 @@
 <div class="subnav_con" style="display:none;">
 <ul>
        <li><a href="http://www.sephora.cn/content/store/" target="_blank" title="寻找丝芙兰门店">寻找丝芙兰门店</a></li>
-       <li><a href="javascript:testAnim('#rule','flipInY',500,1);" title="活动机制">活动机制</a></li>
+       <li><a href="javascript:testAnim('#rule','flipInY','76%',1);" title="活动机制">活动机制</a></li>
 </ul>
 </div>
-
-
-<a href="javascript:;" class="logo">
-	<img src="/images/logo.png" width="40%" />
-</a>
 
 
 <a class="arr_l">
@@ -100,7 +72,7 @@
 </a>
 
 <!-- phone_index start -->
-<div class="phonepage" id="phone_index">
+<div class="phonepage" id="phone_index" style="display:block;">
 
 <div class="flower flower-1">
 	<div class="flower_hover"><img src="/images/product/lotusb2.png" width="100%" /></div>
@@ -163,7 +135,7 @@
 更有机会赢取柔肤洁面泡沫正装一份
 </p>
 <p>点击左上角寻找丝芙兰门店地址 <br />
-     <img src="/images/mobile/keyicon.png" width="5%" />开启与KENZO的邂逅之旅</p>
+     <img src="/images/mobile/keyicon.png" width="5%" />开启与<em>KENZO</em>的邂逅之旅</p>
 
 </div>
 
@@ -177,7 +149,7 @@
 </div>
 
 <div class="btnArea">
-<a href="javascript:;" title="立即分享" class="btn">立即分享</a>
+<a href="javascript:shareFun();" title="立即分享" class="btn">立即分享</a>
 </div>
 
 
@@ -188,7 +160,7 @@
 
 
 <!-- phone_download start -->
-<div class="phonepage" id="phone_download" style="display:block;">
+<div class="phonepage" id="phone_download">
 
 
 <div class="download_con">
@@ -235,7 +207,7 @@
 创造出<em>舒缓白莲系列</em>
 </h2>
 
-<h2>依次点亮三朵暗淡的白莲
+<h2>依次点亮三朵暗淡的白莲<br />
 探索<em>KENZO舒缓白莲系列</em>的明星三重奏</h2>
 </div>
 
@@ -249,6 +221,17 @@
 
 <script type="text/javascript" src="/js/phone.js"></script>
 <script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59619376-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

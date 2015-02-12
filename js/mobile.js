@@ -189,6 +189,7 @@ function loadfriendFun(){
 
 function shareFun(){
   var sharecontent = $(".shareText").html();
+  var shareUrl="http://apps.weibo.com/testadmin/2688959751/4imFB";
   if(associatefriend.length<=0){
       alert("必须@一位好友");
   }else{
@@ -197,7 +198,7 @@ function shareFun(){
         type: "POST",
         url: "/Request.php?model=update",
         data: {
-          "content": associatefriend.join("") + sharecontent
+          "content": associatefriend.join("") + sharecontent + shareUrl
         },
         dataType:"json",
         success: function(data){

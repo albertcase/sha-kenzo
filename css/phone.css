@@ -8,6 +8,7 @@
 
 body{
     font-size: 65%;
+    background: #000;
 }
 
 .absolute{ 
@@ -28,7 +29,6 @@ body{
 	background:#000 url("../images/mobile/bg0.jpg") center no-repeat;
 	display: inline-block;
 	position: relative;
-	opacity: 1;
     overflow: hidden;
 }
 
@@ -40,6 +40,7 @@ body{
     background:#000 url("../images/mobile/bg0.jpg") center no-repeat;
     background-size: 100% auto;
     overflow: hidden;;
+    opacity: 0;
 }
 
 .logo{ 
@@ -48,6 +49,7 @@ body{
     position: absolute;
     left: 0;
     top: 4%;
+    z-index: 9;
 }
 
 .subnav{ 
@@ -55,14 +57,14 @@ body{
     position: absolute;
     left: 5%;
     top: 5%;
-    z-index: 2;
+    z-index: 10;
 }
 
 .subnav_con{ 
-    width: 30%;
+    width: 40%;
     position: absolute;
     left: 7.5%;
-    top: 10%;
+    top: 12%;
     text-align: left; 
     z-index: 2;
 }
@@ -73,11 +75,11 @@ body{
     line-height: 0;
 }
 .subnav_con li{ 
-    padding: 2px 0;
+    padding: 1px 0;
     width: 100%;
     float: left;
     background: url("../images/mobile/dot.png") left center no-repeat;
-    background-size: 10% auto;
+    background-size: 7% auto;
 }
 .subnav_con a{ 
     color: #fff;
@@ -95,11 +97,13 @@ body{
 }
 
 .arr_l{
-    left: 1%;
+    left: -10%;
+    opacity: 0;
 }
 
 .arr_r{
-    right: 1%;
+    right: -10%;
+    opacity: 0;
 }
 
 
@@ -115,10 +119,22 @@ body{
     font-size: 1.2em;
     color: #fff;
     line-height: 1.6em;
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: none;
+    opacity: 0;
 }
 .pagefooter h2 em{
     color: #9cacd8;
+}
+
+
+.pagefooter h2:nth-child(1){
+    top: -80px;
 }
 
 
@@ -136,14 +152,16 @@ body{
     width: 55%;
     position: absolute;
     top: 37%;
-    left: 22%
+    left: 22%;
+    display :none;
+    opacity: 0;
 }
 .flower-1 .pro{
     width: 35%;
     position: absolute;
     left: 50%;
     top: -28%;
-    margin: 0 0 0 -12%;
+    margin: 0 0 0 -17.5%;
     display: none;
     opacity: 0;
 }
@@ -152,7 +170,7 @@ body{
     width: 100%;
     position: absolute;
     left: 0;
-    top: 67%;
+    top: 55%;
     color: #fff;
     background: rgba(156,172,216,0.57);
     padding: 10px;
@@ -189,8 +207,10 @@ body{
 .flower-2{
     width: 55%;
     position: absolute;
-    top: 49%;
-    left: 22%
+    top: 44%;
+    left: 22%;
+    display :none;
+    opacity: 0;
 }
 .flower-2 .pro{
     width: 38%;
@@ -226,13 +246,15 @@ body{
 
 
 .flower-3{
-    width: 60%;
+    width: 62%;
     position: absolute;
-    top: 49%;
-    left: 27%
+    top: 44%;
+    left: 22%;
+    display :none;
+    opacity: 0;
 }
 .flower-3 .pro{
-    width: 60%;
+    width: 57%;
     position: absolute;
     left: 50%;
     top: 0%;
@@ -245,7 +267,7 @@ body{
     width: 100%;
     position: absolute;
     left: 0;
-    top: 60%;
+    top: 50%;
     color: #fff;
     background: rgba(156,172,216,0.57);
     padding: 10px;
@@ -263,12 +285,12 @@ body{
 
 .share_info{
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1.2em;
     line-height: 1.5em;
     text-align: left;
     width: 75%;
     display: inline-block;
-    margin: 30% 0 0 0;
+    margin: 25% 0 0 0;
 }
 
 .share_info p{
@@ -281,6 +303,11 @@ body{
     margin: 0 6px 0 0;
 }
 
+.share_info p em{
+    font-style: normal;
+    color: #9cacd8;
+}
+
 .share_text{
     padding: 16px 10px;
     display: inline-block;
@@ -288,15 +315,15 @@ body{
     background: rgba(156,172,216,0.57);
     color: #fff;
     text-align: left;
-    font-size: 1.4em;
-    line-height: 1.6em;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 
 .share_pro{ 
     width: 60%;
     display: inline-block;
-    margin: 10% 0 6% 0;
+    margin: 3% 0 3% 0;
 }
 
 .btnArea{
@@ -323,10 +350,10 @@ body{
 .download_con{
     width: 80%;
     display: inline-block;
-    margin: 30% 0 10% 0;
+    margin: 30% 0 5% 0;
 }
 .download_con h2{
-    font-size: 2em;
+    font-size: 1.8em;
     color: #fff;
     padding: 10px 0 15px 0;
 }
@@ -336,11 +363,11 @@ body{
 }
 
 .downloadText{
-    padding: 50px 0;
+    padding: 50px 0 30px 0;
     width: 100%;
     background: rgba(156,172,216,0.57);
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1.4em;
     line-height: 1.4em;
 }
 
@@ -363,7 +390,7 @@ body{
     border-radius: 6px;
     z-index: 9;
     overflow: hidden;
-    height: 70%;
+    height: 0;
 }
 
 .close{
@@ -378,29 +405,29 @@ body{
 
 .rule_con{
     width: 100%;
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
     text-align: center;
     color: #000;
-    font-size: 15px;
-    height: 85%;
+    font-size: 1.2em;
+    height: 82%;
     overflow: auto;
 }
 
 .rule_con h2{
-	font-size: 25px;
+	font-size: 1.6em;
 	color: #9cacd8;
 }
 
 .rule_con h1{
-	font-size: 25px;
-	padding: 15px 0;
+	font-size: 1.6em;
+	padding: 6px 0;
 }
 
 .rule_con .step{
-    margin:45px 0 0 0;
+    margin:6% 0 0 0;
     display: inline-block;
     text-align: left;
-    width: 86%;
+    width: 84%;
 }
 .rule_con .step em{
 	color: #9cacd8;
@@ -412,6 +439,19 @@ body{
 
 
 
+
+
+
+
+.layerblur{
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+}
 
 
 
