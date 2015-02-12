@@ -61,23 +61,28 @@ $(".flower-3").click(function(){
 function pageHome(){
 	$("#phone_index").show().stop().animate({"opacity":1},1200,function(){
 		$(".pagefooter h2").eq(0).show().stop().animate({"opacity":1,"top":"-110px"},1200,function(){
-			$(".arr_r").animate({"right":"1%","opacity":1},600);
-		});
+                $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},900,function(){
+                        $(this).hide();
+                        $(".pagefooter h2").eq(1).show().stop().animate({"opacity":1,"top":"-25px"},1000,function(){
+                            clcikval = true;
+                        });
+                })
+        });
 	});
 	$(".flower-1").show().stop().animate({"opacity":1},1560);
 }
 pageHome();
 
 
-function step1Fun(){
-     $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},600,function(){
-	    $(this).hide();
-	    $(".arr_r").animate({"right":"-10%","opacity":0},600);
-	 });
-	 $(".pagefooter h2").eq(1).show().stop().animate({"opacity":1,"top":"-25px"},1000,function(){
-	 	clcikval = true;
-	 });
-}
+// function step1Fun(){
+//      $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},600,function(){
+// 	    $(this).hide();
+// 	    $(".arr_r").animate({"right":"-10%","opacity":0},600);
+// 	 });
+// 	 $(".pagefooter h2").eq(1).show().stop().animate({"opacity":1,"top":"-25px"},1000,function(){
+// 	 	clcikval = true;
+// 	 });
+// }
 
 
 function step2Fun(){
@@ -159,10 +164,11 @@ var curpageid = $("body");
 touch.on(target, 'swipeleft', function(ev){
 	var curarr = parseInt($(".arr_r").css("right"));
 	if(curpageid.attr("id")==""||curarr<=0)return false;
-	if(curpageid.attr("id")=="step0"){
-        step1Fun();
-        curpageid.attr("id","step1");
-	}else if(curpageid.attr("id")=="step1"){
+	// if(curpageid.attr("id")=="step0"){
+ //        //step1Fun();
+ //        //curpageid.attr("id","step1");
+	// }else 
+    if(curpageid.attr("id")=="step0"){
 		step2Fun();
 		curpageid.attr("id","step2");
 	}else if(curpageid.attr("id")=="step2"){
@@ -257,7 +263,7 @@ function downloadlink(){
 function shareFun(){
   $("#sharebtn").hide();
   $(".sharetips").html("分享中...");
-  console.log(this)
+  //console.log(this)
   var sharecontent = $(".share_text").html();
   var shareUrl="http://kenzoki.samesamechina.com";
   $.ajax({
