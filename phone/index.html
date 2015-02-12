@@ -19,7 +19,7 @@
 <body id="step0">
 
 <div id="rule">
-<a href="javascript:testAnim('#rule','flipOutY',0,0);" class="close"></a>
+<a href="javascript:testAnim('#rule','fadeOut',0,0);" class="close"></a>
 <div class="rule_con">
     <h2>活动规则</h2>
     <h1>白莲探秘  双重臻礼</h1>
@@ -59,7 +59,7 @@
 <div class="subnav_con" style="display:none;">
 <ul>
        <li><a href="http://www.sephora.cn/content/store/" target="_blank" title="寻找丝芙兰门店">寻找丝芙兰门店</a></li>
-       <li><a href="javascript:testAnim('#rule','flipInY','76%',1);" title="活动机制">活动机制</a></li>
+       <li><a href="javascript:testAnim('#rule','fadeIn','76%',1);" title="活动机制">活动机制</a></li>
 </ul>
 </div>
 
@@ -149,7 +149,8 @@
 </div>
 
 <div class="btnArea">
-<a href="javascript:shareFun();" title="立即分享" class="btn">立即分享</a>
+<a href="javascript:shareFun();" title="立即分享" class="btn" id="sharebtn">立即分享</a>
+<p class="sharetips" style="color:#fff;"></p>
 </div>
 
 
@@ -180,7 +181,7 @@
 
 
 <div class="btnArea">
-<a href="javascript:;" title="立即下载" class="btn">立即下载</a>
+<a href="javascript:downloadlink();" title="立即下载" class="btn">立即下载</a>
 </div>
 
 

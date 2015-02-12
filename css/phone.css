@@ -290,11 +290,11 @@ body{
     text-align: left;
     width: 75%;
     display: inline-block;
-    margin: 25% 0 0 0;
+    margin: 30% 0 0 0;
 }
 
 .share_info p{
-    padding: 0 0 1.2em 0;
+    padding: 0 0 1em 0;
 }
 
 .share_info p img{
@@ -309,7 +309,7 @@ body{
 }
 
 .share_text{
-    padding: 16px 10px;
+    padding: 12px 10px;
     display: inline-block;
     width: 80%;
     background: rgba(156,172,216,0.57);
@@ -452,6 +452,20 @@ body{
     filter: blur(3px);
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
 }
+
+
+
+#heng{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: #000 url("../images/heng.png") no-repeat center;
+    background-size: 40% auto;
+    top: 0;
+    left: 0;
+}
+
 
 
 
