@@ -1,0 +1,424 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ 
+	margin:0;
+	padding:0; 
+}
+
+body{
+    font-size: 65%;
+}
+
+.absolute{ 
+	position: absolute; 
+}
+
+
+
+#dreambox{ 
+	width:100%; 
+	height:100%; 
+	text-align: center;
+	background: #000;
+}
+
+.pagecon{ 
+	width: 100%;
+	background:#000 url("../images/mobile/bg0.jpg") center no-repeat;
+	display: inline-block;
+	position: relative;
+	opacity: 1;
+    overflow: hidden;
+}
+
+
+.phonepage{ 
+    width: 100%; 
+    height: 100%;
+    display: none;
+    background:#000 url("../images/mobile/bg0.jpg") center no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;;
+}
+
+.logo{ 
+    width: 100%; 
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 4%;
+}
+
+.subnav{ 
+    width: 7%; 
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 2;
+}
+
+.subnav_con{ 
+    width: 30%;
+    position: absolute;
+    left: 7.5%;
+    top: 10%;
+    text-align: left; 
+    z-index: 2;
+}
+.subnav_con ul{ 
+    list-style: disc;
+    font-size: 4em;
+    list-style-position: inside;
+    line-height: 0;
+}
+.subnav_con li{ 
+    padding: 2px 0;
+    width: 100%;
+    float: left;
+    background: url("../images/mobile/dot.png") left center no-repeat;
+    background-size: 10% auto;
+}
+.subnav_con a{ 
+    color: #fff;
+    font-size: 0.3em;
+    text-align: left;
+    float: left;
+    padding: 0 0 0 20px;
+    line-height: 18px;
+}
+
+.arr_l,.arr_r{ 
+    width: 4%;
+    position: absolute;
+    top: 42%;
+}
+
+.arr_l{
+    left: 1%;
+}
+
+.arr_r{
+    right: 1%;
+}
+
+
+
+.pagefooter{ 
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 6%;
+}
+
+.pagefooter h2{
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 1.6em;
+    display: none;
+}
+.pagefooter h2 em{
+    color: #9cacd8;
+}
+
+
+
+
+
+/* --------------- index  --------------- */
+
+#phone_index{ 
+    background:#000 url("../images/mobile/bg1.jpg") center no-repeat; 
+    background-size: 100% auto;
+}
+
+.flower-1{
+    width: 55%;
+    position: absolute;
+    top: 37%;
+    left: 22%
+}
+.flower-1 .pro{
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    top: -28%;
+    margin: 0 0 0 -12%;
+    display: none;
+    opacity: 0;
+}
+
+.flower-1 .proInfo{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 67%;
+    color: #fff;
+    background: rgba(156,172,216,0.57);
+    padding: 10px;
+    line-height: 1.5em;
+    display: none;
+    opacity: 0;
+}
+
+.proInfo h2{ 
+    font-size: 1.6em;
+    padding: 6px 0;
+}
+
+.flower_hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    display: none;
+    opacity: 0;
+}
+
+
+
+/* --------------- phone_pro2  --------------- */
+
+#phone_pro2{ 
+    background:#000 url("../images/mobile/bg2.jpg") center no-repeat; 
+    background-size: 100% auto;
+}
+
+
+.flower-2{
+    width: 55%;
+    position: absolute;
+    top: 49%;
+    left: 22%
+}
+.flower-2 .pro{
+    width: 38%;
+    position: absolute;
+    left: 50%;
+    top: -100%;
+    margin: 0 0 0 -19%;
+    display: none;
+    opacity: 0;
+}
+
+.flower-2 .proInfo{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: #fff;
+    background: rgba(156,172,216,0.57);
+    padding: 10px;
+    line-height: 1.5em;
+    display: none;
+    opacity: 0;
+}
+
+
+
+/* --------------- phone_pro3  --------------- */
+
+#phone_pro3{ 
+    background:#000 url("../images/mobile/bg3.jpg") center no-repeat; 
+    background-size: 100% auto;
+}
+
+
+.flower-3{
+    width: 60%;
+    position: absolute;
+    top: 49%;
+    left: 27%
+}
+.flower-3 .pro{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    margin: 0 0 0 -30%;
+    display: none;
+    opacity: 0;
+}
+
+.flower-3 .proInfo{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    color: #fff;
+    background: rgba(156,172,216,0.57);
+    padding: 10px;
+    line-height: 1.5em;
+    display: none;
+    opacity: 0;
+}
+
+
+
+
+
+
+/* --------------- phone_share  --------------- */
+
+.share_info{
+    color: #fff;
+    font-size: 1.6em;
+    line-height: 1.5em;
+    text-align: left;
+    width: 75%;
+    display: inline-block;
+    margin: 30% 0 0 0;
+}
+
+.share_info p{
+    padding: 0 0 1.2em 0;
+}
+
+.share_info p img{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 6px 0 0;
+}
+
+.share_text{
+    padding: 16px 10px;
+    display: inline-block;
+    width: 80%;
+    background: rgba(156,172,216,0.57);
+    color: #fff;
+    text-align: left;
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
+
+.share_pro{ 
+    width: 60%;
+    display: inline-block;
+    margin: 10% 0 6% 0;
+}
+
+.btnArea{
+    width: 100%;
+    text-align: center;;
+}
+
+.btn{ 
+    width: 30%; 
+    height: 34px; 
+    background: rgba(156,172,216,1);
+    display: inline-block;
+    line-height: 34px;
+    color: #fff;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+
+
+
+/* --------------- phone_download  --------------- */
+.download_con{
+    width: 80%;
+    display: inline-block;
+    margin: 30% 0 10% 0;
+}
+.download_con h2{
+    font-size: 2em;
+    color: #fff;
+    padding: 10px 0 15px 0;
+}
+.download_con h2 em,.downloadText em{
+    font-style: normal;
+    color: #9cacd8;
+}
+
+.downloadText{
+    padding: 50px 0;
+    width: 100%;
+    background: rgba(156,172,216,0.57);
+    color: #fff;
+    font-size: 1.6em;
+    line-height: 1.4em;
+}
+
+.downloadText p{
+    padding: 0 0 1em 0;
+}
+
+
+
+
+
+/* rule */
+#rule{ 
+    width: 82%;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    margin: 0 0 0 -41%;
+    background: rgba(255,255,255,0.96);
+    border-radius: 6px;
+    z-index: 9;
+    overflow: hidden;
+    height: 70%;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    background: url("../images/close.png") no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.rule_con{
+    width: 100%;
+    margin: 40px 0 0 0;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+    height: 85%;
+    overflow: auto;
+}
+
+.rule_con h2{
+	font-size: 25px;
+	color: #9cacd8;
+}
+
+.rule_con h1{
+	font-size: 25px;
+	padding: 15px 0;
+}
+
+.rule_con .step{
+    margin:45px 0 0 0;
+    display: inline-block;
+    text-align: left;
+    width: 86%;
+}
+.rule_con .step em{
+	color: #9cacd8;
+}
+
+.rule_con .step p{
+	padding:5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
