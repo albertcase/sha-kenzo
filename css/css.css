@@ -1,0 +1,531 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ 
+	margin:0;
+	padding:0; 
+}
+
+.absolute{ 
+	position: absolute; 
+}
+
+
+
+#dreambox{ 
+	width:100%; 
+    /* height:100%; */
+	text-align: center;
+	background: #000;
+}
+
+.pagecon{ 
+	width: 940px;
+	height:665px;
+	background:#000 url("../images/mobile/bg.jpg") center no-repeat;
+	display: inline-block;
+	position: relative;
+	opacity: 0;
+    overflow: hidden;
+}
+
+.subnav{ 
+	position: absolute; 
+	right: 0; 
+	top: 0; 
+	width: 215px; 
+	background: #9cacd8;
+	padding: 10px 0 12px 0;
+}
+
+.subnav{ 
+	font-size: 14px; 
+	color: #fff;
+}
+
+.subnav a{ 
+	color: #fff; 
+	padding: 0 6px;
+}
+
+.subnav span{ 
+    width:0;
+    height:0;
+    border-width:10px;
+    border-style:solid dashed dashed dashed;
+    border-color:#9cacd8 transparent transparent transparent;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+}
+
+.logo{
+	margin: 60px 0 0 0;
+	display: inline-block; 
+    position: relative;
+    z-index: 9;
+}
+
+.pageArr{
+    width: 28px;
+    height: 90px;
+    background: rgba(255,255,255,0.3);
+    position: absolute;
+    right: -30px;
+    top:50%;
+    margin: -45px 0 0 0;
+    z-index: 3;
+    opacity: 0;
+}
+
+.pageArr a{
+	width:100%;
+	height: 100%;
+	background: url("../images/mobile/arr_r.png") center no-repeat;
+	display: inline-block;
+}
+
+
+.page{ 
+	display: none; 
+}
+
+
+
+
+.flower-1{
+    width: 46px;
+    height:134px;
+    background: url("../images/home/lotus1.png") no-repeat;
+    left: 225px;
+    top: 215px;
+}
+.flower-2{
+    width: 44px;
+    height:132px;
+    background: url("../images/home/lotus4.png") no-repeat;
+    left: 325px;
+    top: 366px;
+}
+.flower-3{
+    width: 72px;
+    height:144px;
+    background: url("../images/home/lotus2.png") no-repeat;
+    left: 620px;
+    top: 220px;
+}
+
+.proflower{ 
+	z-index: 2; 
+	opacity: 0;
+    cursor: pointer;
+ }
+
+.pf-1{ 
+	width: 242px; 
+    height: 150px;
+    background: url("../images/home/lotus3.png") no-repeat;
+    top: 318px;
+    left: 45px;
+}
+
+.pf-2{ 
+	width: 230px; 
+    height: 338px;
+    background: url("../images/home/lotus5.png") no-repeat;
+    top: 250px;
+    left: 352px;
+}
+
+.pf-3{ 
+	width: 242px; 
+    height: 220px;
+    background: url("../images/home/lotus6.png") no-repeat;
+    top: 312px;
+    left: 652px;
+}
+
+.pf-1 .con{ 
+    width: 100%;
+    height:100%;
+    background: url("../images/product/lotusb1.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+.pf-2 .con{ 
+    width: 100%;
+    height:100%;
+    background: url("../images/product/lotusb2.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+.pf-3 .con{ 
+    width: 100%;
+    height:100%;
+    background: url("../images/product/lotusb3.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+
+.pf-1 .pro{ 
+	width: 62px;
+	height:194px;
+	position: absolute;
+	left: 50%;
+	top: -75px;
+	margin:0 0 0 -31px;
+	background: url("../images/product/product1.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+.pf-2 .pro{ 
+	width: 64px;
+	height:196px;
+	position: absolute;
+	left: 50%;
+	top: -48px;
+	margin:0 0 0 -22px;
+	background: url("../images/product/product2.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+.pf-3 .pro{ 
+	width: 136px;
+	height:120px;
+	position: absolute;
+	left: 50%;
+	top: -10px;
+	margin:0 0 0 -68px;
+	background: url("../images/product/product3.png") no-repeat;
+    opacity: 0;
+    display: none;
+}
+
+
+.flowercon{ 
+    width:  100%;
+    height: 84px;
+    background: rgba(156,172,216,0.57);
+    color: #fff;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    opacity: 0;
+    display: none;
+}
+
+.pf-2 .flowercon{ 
+	bottom: 40px; 
+}
+.pf-3 .flowercon{ 
+	bottom: -17px; 
+}
+
+.flowercon h2{
+	font-size: 16px;
+	padding: 12px 0 10px 0;
+}
+
+.flowercon p{ 
+	font-size: 12px; 
+}
+
+.pagefooter{
+     width: 100%;
+     position: absolute;
+     left: 0; 
+     bottom: 76px;
+     z-index: 3;
+}
+
+.pagefooter h2{ 
+	width: 100%; 
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	line-height: 25px;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 12px;
+}
+
+.pagefooter h2 em{
+    font-style: normal;
+    color: #9cacd8;
+}
+
+
+
+
+
+/* pageShare */
+
+.flower-4{ 
+    width: 242px; 
+    height: 150px;
+    background: url("../images/product/lotusb1.png") no-repeat;
+    top: 365px;
+    left: -142px;
+    display: none;
+    opacity: 0;
+}
+
+.flower-5{ 
+    width: 230px; 
+    height: 338px;
+    background: url("../images/product/lotusb2.png") no-repeat;
+    top: 515px;
+    left: -85px;
+    display: none;
+    opacity: 0;
+}
+
+.flower-6{ 
+    width: 242px; 
+    height: 220px;
+    background: url("../images/product/lotusb3.png") no-repeat;
+    top: 520px;
+    left: 770px;
+    display: none;
+    opacity: 0;
+}
+
+#pageShare { 
+    opacity: 0;
+}
+#pageShare .page_section{
+   width: 666px;
+   display: inline-block;
+}
+
+.sharepro{ 
+    width: 666px;
+    margin: 60px 0 0 0;
+    display: inline-block;
+}
+
+.sharepro dt{ 
+	width: 190px;
+	float: left;
+	display: inline-block; 
+	margin: 0 10px 0 50px;
+}
+
+.sharepro dd{ 
+	width: 390px;
+	float: left;
+	display: inline-block; 
+	color: #fff;
+	font-size: 14px; 
+	text-align: left;
+	line-height: 18px;
+}
+
+.shareText{
+	padding: 10px;
+	width: 660px;
+	background: rgba(156,172,216,0.57);
+    line-height: 22px;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    margin: 56px 0 0 0;
+}
+
+.friendlist{ 
+    width: 666px;
+    display: inline-block;
+    margin: 25px 0 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.friendlist h2{
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.friendlist li{ 
+    width: 60px;
+    height: 60px;
+    background: #9cacd8;
+    float: left;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+.friendlist_con{ 
+	width: 560px;
+	height: 60px;
+	display: inline-block;
+	margin: 18px 0 0 0; 
+	overflow: hidden;
+	position: relative;
+}
+.friendlist_con ul{
+	width: 100000px;
+	position: absolute;
+	left: 0; 
+	top:0;
+}
+
+.friendlist_con li span{
+    width: 18px;
+    height: 18px;
+    background: url("../images/share/hover.png") no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.friendlist_con li.hover span{
+    display: block;
+}
+
+
+.arr_l{
+    width: 18px;
+    height: 60px;
+    background: url("../images/share/prev.png") no-repeat;
+    position: absolute;
+    left: 0;
+    top: 37px;
+    cursor: pointer;
+}
+
+.arr_r{
+    width: 18px;
+    height: 60px;
+    background: url("../images/share/next.png") no-repeat;
+    position: absolute;
+    right: 0;
+    top: 37px;
+    cursor: pointer;
+}
+
+
+
+
+/* -------------- pageShare ------------- */
+.pageDownload_con{ 
+	width: 312px; 
+	margin:55px 0 0 0;
+	display: inline-block;
+    opacity: 0;
+}
+.pageDownload_con h2{
+	font-size: 21px;
+	color: #fff;
+}
+.pageDownload_con h2 em,.download_con p em{
+	color: #9cacd8;
+}
+
+.download_con{ 
+    width: 100%;
+    background: rgba(156,172,216,0.57);
+    line-height: 25px;
+    color: #fff;
+    margin: 22px 0 36px 0;
+    font-size: 16px;
+    padding: 50px 0 20px 0;
+}
+.download_con p{
+    padding:0 0 20px 0;
+}
+
+
+.btn{
+    width: 150px;
+    height: 42px;
+    background: #9cacd8;
+    font-size: 14px;
+    color: #fff;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 0.3em;
+}
+
+
+
+
+
+
+
+/* rule */
+#rule{ 
+    width: 90%;
+    height:0;
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    margin: 0 0 0 -45%;
+    background: rgba(255,255,255,0.96);
+    border-radius: 6px;
+    z-index: 999;
+    overflow: hidden;
+    line-height: 22px;
+}
+
+.close{
+    width: 20px;
+    height: 20px;
+    background: url("../images/close.png") no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.rule_con{
+    width: 100%;
+    margin: 40px 0 0 0;
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+}
+
+.rule_con h2{
+	font-size: 25px;
+	color: #9cacd8;
+}
+
+.rule_con h1{
+	font-size: 25px;
+	padding: 15px 0;
+}
+
+.rule_con .step{
+    margin:30px 0 0 0;
+    display: inline-block;
+}
+.rule_con .step em{
+	color: #9cacd8;
+}
+
+.rule_con .step p{
+	padding:3px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
