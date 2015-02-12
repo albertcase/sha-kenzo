@@ -17,6 +17,7 @@
     /* height:100%; */
 	text-align: center;
 	background: #000;
+    margin: -65px 0 0 0;
 }
 
 .pagecon{ 
@@ -32,7 +33,7 @@
 .subnav{ 
 	position: absolute; 
 	right: 0; 
-	top: 0; 
+	top: 65px; 
 	width: 215px; 
 	background: #9cacd8;
 	padding: 10px 0 12px 0;
@@ -60,7 +61,7 @@
 }
 
 .logo{
-	margin: 60px 0 0 0;
+	margin: 100px 0 0 0;
 	display: inline-block; 
     position: relative;
     z-index: 9;
@@ -468,7 +469,7 @@
     height:0;
     position: absolute;
     left: 50%;
-    top: 90px;
+    top: 110px;
     margin: 0 0 0 -45%;
     background: rgba(255,255,255,0.96);
     border-radius: 6px;
