@@ -1,8 +1,6 @@
 
 
 
-
-
 loadfriendFun();
 
 
@@ -67,9 +65,9 @@ Array.prototype.remove = function(val) {
 
 
 
-
 var friendlistHtml = "";
 var associatefriend = [];
+var shareUrl ="";
 function loadfriendFun(){
   friendlistHtml="";
   $.ajax({
@@ -90,7 +88,7 @@ function loadfriendFun(){
                associatefriend.remove($(this).find("img").attr("alt"));
            }else{
                $(this).addClass("hover");
-               associatefriend.push($(this).find("img").attr("alt"
+               associatefriend.push($(this).find("img").attr("alt"));
            }  
        })
 
@@ -103,21 +101,22 @@ function loadfriendFun(){
 
 
 function shareFun(){
-  var sharecontent = $(".shareText").html();
+  var sharecontent = "#白莲探秘#白莲的清甜馥郁，是KENZO独有的味道，一起来探索KENZO的“愉悦护肤”，体验全新上市的舒缓白莲系列。"
   if(associatefriend.length<=0){
       alert("必须@一位好友");
   }else{
       friendlistHtml="";
+      shareUrl="http://kenzoki.samesamechina.com/";
       $.ajax({
         type: "POST",
         url: "/Request.php?model=update",
         data: {
-          "content": associatefriend.join("") + sharecontent
+          "content": associatefriend.join("") + sharecontent + shareUrl
         },
         dataType:"json",
         success: function(data){
            //alert(data.msg);
-           window.location.href="form.html"
+           window.location.href="question.html";
 
         }
       });

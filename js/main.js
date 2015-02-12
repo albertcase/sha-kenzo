@@ -1,4 +1,5 @@
 
+
 ;(function($){
     $(function(){
 
@@ -27,7 +28,7 @@
             if($(this).hasClass("hover")) 
                 return false;
             $(this).addClass("hover");
-            $('.lotus3 img').attr("src","images/product/lotusb1.png");
+            $('.lotus3 img').attr("src","/images/product/lotusb1.png");
             $("#home .product1 img").css("display", "block").animate({"opacity":1}, 3000);
             $("#home .product1 .purplebox").animate({"opacity":1}, 3000);
             num += 1; 
@@ -41,7 +42,7 @@
             if($(this).hasClass("hover")) 
                 return false;
             $(this).addClass("hover");
-            $('.lotus5 img').attr("src","images/product/lotusb2.png");
+            $('.lotus5 img').attr("src","/images/product/lotusb2.png");
             $("#home .product2 img").css("display", "block").animate({"opacity":1}, 3000);
             $("#home .product2 .purplebox").animate({"opacity":1}, 3000);     
             num += 1; 
@@ -54,7 +55,7 @@
             if($(this).hasClass("hover")) 
                 return false;
             $(this).addClass("hover");
-            $('.lotus6 img').attr("src","images/product/lotusb3.png");
+            $('.lotus6 img').attr("src","/images/product/lotusb3.png");
             $("#home .product3 img").css("display", "block").animate({"opacity":1}, 3000);
             $("#home .product3 .purplebox").animate({"opacity":1}, 3000);
             num += 1; 
@@ -89,9 +90,9 @@
                 $("#question").addClass("hover");
                 $( ".tips" ).css( 'display', 'block');
                 
-                setTimeout(function(){
+                /*setTimeout(function(){
                     location.href="index.html";
-                }, 2000);
+                }, 2000);*/
 
         
                 
@@ -143,12 +144,34 @@
                 return false;
             }
             $("#form").addClass("hover");
-                $( ".tips" ).css( 'display', 'block');
+                //$( ".tips" ).css( 'display', 'block');
+            $.ajax({
+                type: "POST",
+                url: "/Request.php?model=finish",
+                data: {
+                  "name": name,
+                  "mobile":phoneNo,
+                  "city":city,
+                  "address":addr
+                },
+                dataType:"json",
+                success: function(data){
+                   if(data.code==1){
+                        $( ".tips" ).css( 'display', 'block');
+                        setTimeout(function(){
+                            location.href="index.html";
+                        }, 2000);
+                   }else{
+                        alert(data.msg);
+                   }
+                   //window.location.href="question.html"
+
+                }
+              });
                 
-                setTimeout(function(){
-                    location.href="index.html";
-                }, 2000);
-    
+                /*
+                
+                */
 
         });
 

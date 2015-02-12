@@ -218,7 +218,7 @@ section .rulebox {
     position: absolute;
     top: 170px;
     left: 47px;
-    z-index:100;
+    z-index:10000;
     opacity: 0.95;
     filter: alpha(opacity=95);    
     -moz-opacity:0.95;    
@@ -479,7 +479,7 @@ section .con .firstrule span{
     color: #fff;
     text-align: left;
     line-height: 160%;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 20px;
 
 } 
 #share .share_con_word .purplemask{
@@ -536,6 +536,10 @@ section .con .firstrule span{
     display: inline-block;
     margin: 0 5px;
     position: relative;
+}
+.friendlist li img{ 
+    width: 60px;
+    height: 60px;
 }
 .friendlist_con{ 
     width: 560px;
@@ -629,14 +633,18 @@ section .con .firstrule span{
 }
 .formcontent form  div .formask{
     background-color: #9cacd8;
+    border:3px #47547c solid;
+    width: 398px;
+    height: 49px; 
+    
+    margin-bottom: 10px;
+    border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -o-border-radius: 10px;
     -ms-border-radius: 10px;
-　　 border-radius: 10px;
-    border:3px #47547c solid;
-    width: 398px;
-    height: 49px; 
+    -khtml-border-radius: 10px;
+
     opacity: .57;
     filter: alpha(opacity=57);    
     -moz-opacity:0.57;    
@@ -644,16 +652,10 @@ section .con .firstrule span{
     -webkit-opacity: 0.57;
     -o-opacity: 0.57;
     -ms-opacity: 0.57;
-    margin-bottom: 10px;
     
 }
 .formcontent form .infoCity .formask {
     background-color: #9cacd8;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-　　 border-radius: 10px;
     border:3px #47547c solid;
     width: 398px;
     height: 86px;
@@ -664,6 +666,12 @@ section .con .firstrule span{
     -webkit-opacity: 0.57;
     -o-opacity: 0.57;
     -ms-opacity: 0.57;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -khtml-border-radius: 10px;
 }
 
 .formcontent form div img {
@@ -741,13 +749,11 @@ section .con .firstrule span{
     width: 250px;
     height: 28px;
     position: relative;
-    z-index: 999;
+    z-index: 2;
     float: left;
     margin-top: -55px;
     margin-left: 120px;
     
-
-
 }
 
 #formval .errorTips{ 
@@ -755,6 +761,14 @@ section .con .firstrule span{
     font-size: 15px;
     font-weight: normal;
     
+}
+#form .weibotip{
+    position: absolute;
+    top: 80%;
+}
+.weibotip p{
+    font-size: 10px;
+    color:#fff;
 }
 
 .submit-btn{
@@ -776,11 +790,13 @@ section .con .firstrule span{
 }
 
 #form.hover {     
-    -webkit-filter: blur(2px);
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
+    -webkit-filter: blur(2px); /* Chrome, Opera */
     -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
+    -ms-filter: blur(2px);    
     filter: blur(2px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false); /* IE6~IE9 */
     
 }
 
@@ -905,16 +921,17 @@ section .con .firstrule span{
 .tips {
     color:#000;
     width: 473px;
-    height: 71px;
+    height: 71px; 
+    background-color: #fff;
+    border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     -o-border-radius: 3px;
     -ms-border-radius: 3px;
-　　 border-radius: 3px;
+    -khtml-border-radius: 3px;
     position: absolute;
     top: 40%;
-    left:31%;
-    background-color: #fff;
+    left:25%;
     display: none;
 
 
@@ -927,12 +944,14 @@ section .con .firstrule span{
 
 
 #question.hover {     
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
+    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
     
-    filter:blur(Add="1",Direction="45",Strength="5")
+    -webkit-filter: blur(2px); /* Chrome, Opera */
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);    
+    filter: blur(2px);
+    
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false); /* IE6~IE9 */
     
 }
 
