@@ -771,6 +771,22 @@ section .con .firstrule span{
     z-index: 1000;
     font-family:'STHeiti';
 }
+#formval select{
+    float:left;
+    margin-top: -45px;
+    margin-left: 120px;
+    width:250px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1000;
+    font-family:'STHeiti';
+}
 #formval textarea {
     background: none;
     border: none;
