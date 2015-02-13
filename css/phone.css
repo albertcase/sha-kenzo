@@ -157,11 +157,11 @@ body{
     opacity: 0;
 }
 .flower-1 .pro{
-    width: 45%;
+    width: 40%;
     position: absolute;
     left: 50%;
     top: -18%;
-    margin: -16% 0 0 -17%;
+    margin: -8% 0 0 -16%;
     display: none;
     opacity: 0;
 }
@@ -213,11 +213,11 @@ body{
     opacity: 0;
 }
 .flower-2 .pro{
-    width: 40%;
+    width: 36%;
     position: absolute;
     left: 50%;
 
-    margin: -2% 0 0 -19%;
+    margin: 9% 0 0 -16%;
     display: none;
     opacity: 0;
 }
