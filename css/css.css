@@ -177,11 +177,11 @@
 	position: absolute;
 	left: 50%;
 	top: -95px;
-	margin:0 0 0 -50px;
+	margin:0 0 0 -26px;
 	background: url("../images/product/product1.png") no-repeat;
     opacity: 0;
     display: none;
-    background-size: 100%;
+    background-size: 62%;
 }
 
 .pf-2 .pro{ 
