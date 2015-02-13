@@ -787,6 +787,9 @@ section .con .firstrule span{
     z-index: 1000;
     font-family:'STHeiti';
 }
+#formval option{
+    color: #000;
+}
 #formval textarea {
     background: none;
     border: none;
