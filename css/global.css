@@ -297,7 +297,7 @@ section .con .firstrule span{
 
 
 /* home */
-#home .product1 img {
+#home .product1 .product1 {
     position: absolute;
     z-index: 10;
     top: 246px;
@@ -313,7 +313,7 @@ section .con .firstrule span{
     
 }
 
-#home .product2 img {
+#home .product2 .product2{
     position: absolute;
     z-index: 10;
     top: 214px;
@@ -327,7 +327,7 @@ section .con .firstrule span{
     -ms-opacity: 0;
     display: none;
 }
-#home .product3 img {
+#home .product3 .product3{
     position: absolute;
     z-index: 10;
     top: 306px;
@@ -407,6 +407,48 @@ section .con .firstrule span{
     font-size: 12px;
     margin: -10px 0px 0px 0px;
     line-height: 150%;
+
+}
+.lotousp1{
+    z-index: 10;
+    position: absolute;
+    top: 310px;
+    left: 30px;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+    display: none;
+
+}
+.lotousp2{
+    z-index: 10;
+    position: absolute;
+    top: 250px;
+    left: 350px;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+    display: none;
+
+}
+.lotousp3{
+    z-index: 10;
+    position: absolute;
+    top: 310px;
+    right: 65px;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+    display: none;
 
 }
 
