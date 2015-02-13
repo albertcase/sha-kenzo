@@ -106,7 +106,7 @@
             "phone" : "请输入您的手机号！",
             "checkphone" : "请填写正确手机号！",
             "addr" : "请输入您的地址！",
-            "city" : "请输入您的城市！"
+            "city" : "请输入您的省份！"
 
         }
         $("#submit-btn").on('click',function(){
