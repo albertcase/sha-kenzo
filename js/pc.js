@@ -102,9 +102,7 @@ function loadfriendFun(){
 
 function shareFun(){
   var sharecontent = "#白莲探秘#白莲的清甜馥郁，是KENZO独有的味道，一起来探索KENZO的“愉悦护肤”，体验全新上市的舒缓白莲系列。"
-  if(associatefriend.length<=0){
-      alert("必须@一位好友");
-  }else{
+
       friendlistHtml="";
       shareUrl="http://kenzoki.samesamechina.com/";
       $.ajax({
@@ -120,7 +118,7 @@ function shareFun(){
 
         }
       });
-  }
+  
   
 }
 
