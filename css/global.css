@@ -48,6 +48,7 @@ input,textarea {
 body{
     width: 940px;
     margin: 0 auto;
+    height:615px;
 }
 section{
     color: #535353;
@@ -297,11 +298,12 @@ section .con .firstrule span{
 
 
 /* home */
-#home .product1 .product1 {
+#home .product1 .productone {
+    width: 10%;
     position: absolute;
     z-index: 10;
-    top: 246px;
-    left: 116px;
+    top: 235px;
+    left: 105px;
     opacity: 0;
     filter: alpha(opacity=0);    
     -moz-opacity:0;    
@@ -310,13 +312,15 @@ section .con .firstrule span{
     -o-opacity: 0;
     -ms-opacity: 0;
     display: none;
+    width:50;
     
 }
 
-#home .product2 .product2{
+#home .product2 .producttwo{
+    width: 6.5%;
     position: absolute;
     z-index: 10;
-    top: 214px;
+    top: 213px;
     left: 440px;
     opacity: 0;
     filter: alpha(opacity=0);    
@@ -327,11 +331,12 @@ section .con .firstrule span{
     -ms-opacity: 0;
     display: none;
 }
-#home .product3 .product3{
+#home .product3 .productthree{
+    width: 13%;
     position: absolute;
     z-index: 10;
     top: 306px;
-    right: 106px;
+    right: 112px;
     opacity: 0;
     filter: alpha(opacity=0);    
     -moz-opacity:0;    
