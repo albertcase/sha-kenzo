@@ -193,9 +193,7 @@ function shareFun(){
   var shareUrl="http://kenzoki.samesamechina.com";
   $("#sharebtn").hide();
   $(".sharetips").html("分享中...");
-  if(associatefriend.length<=0){
-      alert("必须@一位好友");
-  }else{
+
       friendlistHtml="";
       $.ajax({
         type: "POST",
@@ -211,7 +209,7 @@ function shareFun(){
            downloadPage();
         }
       });
-  }
+
   
 }
 
