@@ -90,9 +90,9 @@
                 $("#question").addClass("hover");
                 $( ".tips" ).css( 'display', 'block');
                 
-                /*setTimeout(function(){
+                setTimeout(function(){
                     location.href="index.html";
-                }, 2000);*/
+                }, 2000);
 
         
                 
