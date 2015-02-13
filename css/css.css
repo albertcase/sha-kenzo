@@ -172,15 +172,16 @@
 
 
 .pf-1 .pro{ 
-	width: 62px;
-	height:194px;
+	width: 100px;
+	height:300px;
 	position: absolute;
 	left: 50%;
-	top: -75px;
-	margin:0 0 0 -31px;
+	top: -95px;
+	margin:0 0 0 -50px;
 	background: url("../images/product/product1.png") no-repeat;
     opacity: 0;
     display: none;
+    background-size: 100%;
 }
 
 .pf-2 .pro{ 
@@ -193,6 +194,7 @@
 	background: url("../images/product/product2.png") no-repeat;
     opacity: 0;
     display: none;
+    background-size: 100%;
 }
 
 .pf-3 .pro{ 
@@ -205,6 +207,7 @@
 	background: url("../images/product/product3.png") no-repeat;
     opacity: 0;
     display: none;
+    background-size: 100%;
 }
 
 
