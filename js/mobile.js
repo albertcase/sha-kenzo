@@ -268,7 +268,33 @@ function downloadlink(){
 }
 
 
+/* 手机滑动效果js */
 
+touch.on('body', 'swipeleft', function(){
+  if($('.pageArr').css('opacity') == 1) {
+    $(".flower-1").animate({"opacity":0},600,function(){
+        $(this).css({"left":136,"top":152});
+    });
+    $(".flower-2").animate({"opacity":0},600,function(){
+        $(this).css({"left":820,"top":250});
+    })
+    $(".flower-3").animate({"opacity":0},600,function(){
+        $(this).css({"left":760,"top":180});
+    })
+    $("#pageStep").stop().animate({"opacity":0},500,function(){
+        $(this).hide();
+        $("#pageShare").show().stop().animate({"opacity":1},600,function(){
+            $(".flower-1").animate({"opacity":1});
+            $(".flower-2").animate({"opacity":1});
+            $(".flower-3").animate({"opacity":1});
+            $(".flower-4").show().animate({"opacity":1,"left":"-132px"},1200);
+            $(".flower-5").show().animate({"opacity":1,"left":"-75px","top":505},700);
+            $(".flower-6").show().animate({"opacity":1,"left":"760px","top":510},600);
+            loadfriendFun();
+        });
+    }); 
+  }
+});
 
 
 
