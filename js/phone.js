@@ -181,6 +181,24 @@ touch.on(target, 'swipeleft', function(ev){
 });
 
 
+$('.arr_r').on('click', function(){
+    var curarr = parseInt($(".arr_r").css("right"));
+    if(curpageid.attr("id")==""||curarr<=0)return false;
+    // if(curpageid.attr("id")=="step0"){
+ //        //step1Fun();
+ //        //curpageid.attr("id","step1");
+    // }else 
+    if(curpageid.attr("id")=="step0"){
+        step2Fun();
+        curpageid.attr("id","step2");
+    }else if(curpageid.attr("id")=="step2"){
+        step3Fun();
+        curpageid.attr("id","step_share");
+    }else if(curpageid.attr("id")=="step_share"){
+        stepShareFun();
+        curpageid.attr("id","");
+    }
+});
 
 /* 横屏监测事件 */
 
