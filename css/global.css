@@ -299,11 +299,11 @@ section .con .firstrule span{
 
 /* home */
 #home .product1 .productone {
-    width: 10%;
+    width: 6%;
     position: absolute;
     z-index: 10;
-    top: 235px;
-    left: 105px;
+    top: 260px;
+    left: 120px;
     opacity: 0;
     filter: alpha(opacity=0);    
     -moz-opacity:0;    
@@ -320,7 +320,7 @@ section .con .firstrule span{
     width: 6.5%;
     position: absolute;
     z-index: 10;
-    top: 213px;
+    top: 226px;
     left: 440px;
     opacity: 0;
     filter: alpha(opacity=0);    
@@ -335,7 +335,7 @@ section .con .firstrule span{
     width: 13%;
     position: absolute;
     z-index: 10;
-    top: 306px;
+    top: 307px;
     right: 112px;
     opacity: 0;
     filter: alpha(opacity=0);    
