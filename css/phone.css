@@ -490,10 +490,10 @@ body{
     margin-left: 3px;
     background: url('../images/hand.png') no-repeat;
     background-size: 40px;
-    -webkit-animation:handmove 2s;
-    -moz-animation:handmove 2s;
-    -o-animation:handmove 2s;
-    animation:handmove 2s;
+    -webkit-animation:handmove 2s infinite;
+    -moz-animation:handmove 2s infinite;
+    -o-animation:handmove 2s infinite;
+    animation:handmove 2s infinite;
 }
 
 .hand-action .hc{
@@ -560,7 +560,11 @@ body{
 }
 @-webkit-keyframes handmove{
     0%{-webkit-transform: translate(0, 24px);}
-    100%{-webkit-transform: translate(0, 0);}
+    25%{-webkit-transform: translate(0, 0);}
+    50%{-webkit-transform: translate(0, 24px);}
+    75%{-webkit-transform: translate(0, 0);}
+    100%{-webkit-transform: translate(0, 24px);}
+
 }
 @-moz-keyframes handmove{
     0%{-moz-transform: translate(0, 24px);}

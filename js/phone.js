@@ -300,7 +300,9 @@ function shareFun(){
   });
 }
 
-$(".hand-action").fadeOut(5000);
+setTimeout(function(){
+    $(".hand-action").fadeOut(1000);
+}, 3000);
 
 
 
