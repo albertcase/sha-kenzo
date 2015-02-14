@@ -468,11 +468,109 @@ body{
 
 
 
+/**
+ *  Hand move
+ *
+ **/
+.hand-action{ 
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 180px;
+    height: 142px;
+    margin-left: -10px;
+    padding-top: 23px;
+    padding-left: 5px;
+    z-index: 99;
+}
+.hand-action .hand-img{
+    width: 41px;
+    height: 60px;
+    opacity: 0.8;
+    margin-left: 3px;
+    background: url('../images/hand.png') no-repeat;
+    background-size: 40px;
+    -webkit-animation:handmove 2s;
+    -moz-animation:handmove 2s;
+    -o-animation:handmove 2s;
+    animation:handmove 2s;
+}
+
+.hand-action .hc{
+    position: absolute;
+    top:10px;
+    left: 0;
+    background: #fff;
+}
+.hand-action .hc1{
+    z-index: 1;
+    opacity: 0.2;
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    -webkit-animation:circlechange 1s infinite;
+    -moz-animation:circlechange 1s infinite;
+    -o-animation:circlechange 1s infinite;
+    animation:circlechange 1s infinite;
+}
+.hand-action .hc2{
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    opacity: 0.5;
+    left: 7px;
+    top: 17px;
+}
+.hand-action .tip2{
+    position: relative;
+    margin-left: -122px;
+    margin-top: 10px;
+    opacity: 0.8;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.4em;
+}
+@keyframes circlechange{
+    0%{transform:scale(1)}
+    50%{transform:scale(0.6)}
+    100%{transform:scale(1)}
+}
+@-webkit-keyframes circlechange{
+    0%{-webkit-transform:scale(1)}
+    50%{-webkit-transform:scale(0.6)}
+    100%{-webkit-transform:scale(1)}
+}
+@-moz-keyframes circlechange{
+    0%{-moz-transform:scale(1)}
+    50%{-moz-transform:scale(0.6)}
+    100%{-moz-transform:scale(1)}
+}
+@-o-keyframes circlechange{
+    0%{-o-transform:scale(1)}
+    50%{-o-transform:scale(0.6)}
+    100%{-o-transform:scale(1)}
+}
 
 
+@keyframes handmove{
+    0%{transform: translate(0, 24px);}
+    100%{transform: translate(0, 0);}
+}
+@-webkit-keyframes handmove{
+    0%{-webkit-transform: translate(0, 24px);}
+    100%{-webkit-transform: translate(0, 0);}
+}
+@-moz-keyframes handmove{
+    0%{-moz-transform: translate(0, 24px);}
+    100%{-moz-transform: translate(0, 0);}
+}
 
-
-
+@-o-keyframes handmove{
+    0%{-o-transform: translate(0, 24px);}
+    100%{-o-transform: translate(0, 0);}
+}
 
 
 
