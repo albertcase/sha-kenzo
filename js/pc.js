@@ -92,9 +92,9 @@ function loadfriendFun(){
            }  
        })
 
-       $(".friendlist_con li").eq(0).click();
-       $(".friendlist_con li").eq(1).click();
-       $(".friendlist_con li").eq(2).click();
+      //$(".friendlist_con li").eq(0).click();
+      //$(".friendlist_con li").eq(1).click();
+      //$(".friendlist_con li").eq(2).click();
     }
   });
 }
