@@ -776,8 +776,8 @@ section .con .firstrule span{
     margin-top: -45px;
     margin-left: 120px;
     width:250px;
-    height: 20px;
-    line-height: 20px;
+    height: 22px;
+    line-height: 22px;
     font-size: 20px;
     color: #fff;
     display: inline-block;
@@ -788,7 +788,8 @@ section .con .firstrule span{
     font-family:'STHeiti';
 }
 #formval option{
-    color: #000;
+    background-color: #6c748b;
+    border: none;
 }
 #formval textarea {
     background: none;
