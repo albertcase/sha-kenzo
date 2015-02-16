@@ -160,8 +160,7 @@ body{
     width: 40%;
     position: absolute;
     left: 50%;
-    top: -18%;
-    margin: -8% 0 0 -16%;
+    margin: -30% 0 0 -16%;
     display: none;
     opacity: 0;
 }
@@ -216,8 +215,7 @@ body{
     width: 36%;
     position: absolute;
     left: 50%;
-
-    margin: 9% 0 0 -16%;
+    margin: -50% 0 0 -16%;
     display: none;
     opacity: 0;
 }

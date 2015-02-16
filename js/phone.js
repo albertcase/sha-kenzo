@@ -26,8 +26,9 @@ $(".subnav_con li").on('click', function(e){
 
 $(".flower-1").click(function(){
 	if(!clcikval)return false;
+    $(".hand-action").hide();
     $(this).find(".flower_hover").show().stop().animate({"opacity":1},600);
-    $(this).find(".pro").show().stop().animate({"opacity":1,"top":"-30%"},600);
+    $(this).find(".pro").show().stop().animate({"opacity":1,"top":"-20%"},600);
     $(this).find(".proInfo").show().stop().animate({"opacity":1,"top":"60%"});
     clcikval = false;
     $(".arr_r").animate({"right":"1%","opacity":1},600);
@@ -36,7 +37,7 @@ $(".flower-1").click(function(){
 $(".flower-2").click(function(){
 	if(!clcikval)return false;
     $(this).find(".flower_hover").show().stop().animate({"opacity":1},600);
-    $(this).find(".pro").show().stop().animate({"opacity":1,"top":"-120%"},600);
+    $(this).find(".pro").show().stop().animate({"opacity":1,"top":"-30%"},600);
     $(this).find(".proInfo").show().stop().animate({"opacity":1,"top":"110%"});
     clcikval = false;
     $(".arr_r").animate({"right":"1%","opacity":1},600);
@@ -107,6 +108,7 @@ var initFlow = function(){
 function step1Fun(){
     $(".phonepage").stop().animate({"opacity":0},600,function(){
         $(this).hide();
+        $(".arr_r").animate({"right":"-10%","opacity":0},600);
         $(".arr_l").animate({"left":"-10%","opacity":0},600);
         $("#phone_index").show().stop().animate({"opacity":1},1000);
         initFlow();
