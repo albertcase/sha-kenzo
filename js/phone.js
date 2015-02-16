@@ -107,7 +107,7 @@ var initFlow = function(){
 function step1Fun(){
     $(".phonepage").stop().animate({"opacity":0},600,function(){
         $(this).hide();
-        $(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $(".arr_l").animate({"left":"-10%","opacity":0},600);
         $("#phone_index").show().stop().animate({"opacity":1},1000);
         initFlow();
         $(".flower-1").show().stop().animate({"opacity":1},1560,function(){
