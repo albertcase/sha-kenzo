@@ -1,5 +1,5 @@
 html,body{
-    font-family: 'STHeiti';
+    font-family: 'Microsoft YaHei';
 }
 p,div,h2{
     padding: 0;
@@ -96,6 +96,15 @@ section .nav-btn{
 }
 #nav-left-btn{
     left:0;
+    opacity: 0;
+    filter: alpha(opacity=0);    
+    -moz-opacity:0;    
+    -khtml-opacity: 0;      
+    -webkit-opacity: 0;
+    -o-opacity: 0;
+    -ms-opacity: 0;
+    
+    
 }
 #nav-right-btn{
     right: 0;
@@ -198,6 +207,7 @@ section .introduction1 {
     
 }
 section .introduction1 p {
+    font-family: 'Microsoft YaHei';
     font-size: 14px;
     line-height: 140%;
     color: #fff;
@@ -238,23 +248,27 @@ section .close {
     
 }
 section .con h1{
+    font-family: 'Microsoft YaHei';
     font-size: 25px;
     color: #9cacd8;
     font-weight: normal;
 }
 section .con h2{
+    font-family: 'Microsoft YaHei';
     font-size: 24px;
     color: #000;
     font-weight: normal;
     margin-top: -10px;
 }
 section .con h3{
+    font-family: 'Microsoft YaHei';
     font-size: 15px;
     color: #000;
     font-weight: normal;
 
 }
 section .con .firstrule{
+    font-family: 'Microsoft YaHei';
     margin-top: 30px;
     font-size: 15px;
 }
@@ -280,11 +294,13 @@ section .con .firstrule span{
     left:-500px;
 }
 .bottom-wrap h2{
+    font-family: 'Microsoft YaHei';
     width: 100%;
     display: block;
     text-align: center;
     font-size: 17px;
     font-weight: bold;
+
 }
 
 
@@ -302,7 +318,7 @@ section .con .firstrule span{
     width: 6%;
     position: absolute;
     z-index: 10;
-    top: 260px;
+    top: 232px;
     left: 120px;
     opacity: 0;
     filter: alpha(opacity=0);    
@@ -335,7 +351,7 @@ section .con .firstrule span{
     width: 13%;
     position: absolute;
     z-index: 10;
-    top: 307px;
+    top: 300px;
     right: 112px;
     opacity: 0;
     filter: alpha(opacity=0);    
@@ -412,6 +428,7 @@ section .con .firstrule span{
     font-size: 12px;
     margin: -10px 0px 0px 0px;
     line-height: 150%;
+    font-family: 'Microsoft YaHei';
 
 }
 .lotousp1{
@@ -512,6 +529,7 @@ section .con .firstrule span{
     float: left; 
     margin-left: 20px;
     margin-top: -2px;
+    font-family: 'Microsoft YaHei';
 } 
 #share .share_con_word{
     width:670px;
@@ -526,7 +544,8 @@ section .con .firstrule span{
     color: #fff;
     text-align: left;
     line-height: 160%;
-    margin: 10px 0 0 20px;
+    margin: 10px 0 0 28px;
+    font-family: 'Microsoft YaHei';
 
 } 
 #share .share_con_word .purplemask{
@@ -573,6 +592,7 @@ section .con .firstrule span{
     color: #fff;
     text-align: left;
     margin-bottom: 20px;
+    font-family: 'Microsoft YaHei';
 }
 
 .friendlist li{ 
@@ -669,6 +689,7 @@ section .con .firstrule span{
     top:150px;
     font-size: 14px;
     color: #fff;
+    font-family: 'Microsoft YaHei';
 }
 #form .form_con p{
     line-height: 150%;
@@ -738,7 +759,7 @@ section .con .firstrule span{
 .formcontent form div p {
     float:left;
     color: #fff;
-    margin-top: -50px;
+    margin-top: -56px;
     margin-left: 60px;
     font-size:20px;
     font-weight: normal;
@@ -769,14 +790,14 @@ section .con .firstrule span{
     border: none;
     position: relative;
     z-index: 1000;
-    font-family:'STHeiti';
+    font-family:'Microsoft YaHei';
 }
 #formval select{
     float:left;
-    margin-top: -45px;
+    margin-top: -50px;
     margin-left: 120px;
     width:250px;
-    height: 22px;
+    height: 25px;
     line-height: 22px;
     font-size: 20px;
     color: #fff;
@@ -785,7 +806,7 @@ section .con .firstrule span{
     border: none;
     position: relative;
     z-index: 1000;
-    font-family:'STHeiti';
+    font-family:'Microsoft YaHei';
 }
 #formval option{
     background-color: #6c748b;
@@ -806,7 +827,7 @@ section .con .firstrule span{
     font-size: 20px;
     color: #fff;
     line-height: 136%;
-    font-family:'STHeiti';
+    font-family:'Microsoft YaHei';
 
 
 }
@@ -824,6 +845,7 @@ section .con .firstrule span{
 }
 
 #formval .errorTips{ 
+    font-family: 'Microsoft YaHei';
     color: #fff;
     font-size: 15px;
     font-weight: normal;
@@ -834,6 +856,7 @@ section .con .firstrule span{
     top: 80%;
 }
 .weibotip p{
+    font-family: 'Microsoft YaHei';
     font-size: 10px;
     color:#fff;
 }
@@ -887,11 +910,13 @@ section .con .firstrule span{
 
 }
 #question .scan_con h1{
+    font-family: 'Microsoft YaHei';
     font-size: 20px;
     font-weight: normal;
 }
 
 #question .scan_con p{
+    font-family: 'Microsoft YaHei';
     font-size: 12px;
     line-height: 150%;
     margin-top: -10px;
@@ -923,6 +948,7 @@ section .con .firstrule span{
 
 }
 #question .question_mask_con h1{
+    font-family: 'Microsoft YaHei';
     font-size: 17px;
     color: #fff;
     position: absolute;
@@ -947,6 +973,7 @@ section .con .firstrule span{
 
 }
 #question .question_mask_con .sf{
+    font-family: 'Microsoft YaHei';
     font-size: 17px;
     color: #fff;
     position: absolute;
@@ -962,12 +989,14 @@ section .con .firstrule span{
 
 }
 #question .question_mask_con .yy{
+    font-family: 'Microsoft YaHei';
     font-size: 17px;
     color: #fff;
     position: absolute;
     top: 540px;
     left: 620px;
     font-weight: normal;
+
 
 }
 #question .question_mask_con .radio_yy{
@@ -1004,6 +1033,7 @@ section .con .firstrule span{
 
 }
 .tips p{
+    font-family: 'Microsoft YaHei';
     font-size: 18px;
     margin-top: 22px;
     text-align: center;

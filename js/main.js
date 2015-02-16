@@ -73,7 +73,7 @@
         }); 
 
 
-
+        $('#nav-left-btn').animate({"opacity":1}, 5000);
 
         $(".checkbox").on('click', function(){
             if($(this).hasClass("hover")){
