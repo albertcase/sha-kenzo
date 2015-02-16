@@ -4,7 +4,8 @@
     $(function(){
 
         $('.showRule').on('click', function(){
-
+            $('.rulebox').css({"width": "846px", "height": "460px", "top": "170px", "left": "47px"});
+            $(".rulebox .con").show();
             $('.rulebox').css('display', 'block');
 
         });
