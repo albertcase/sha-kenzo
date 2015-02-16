@@ -178,6 +178,21 @@ body{
     opacity: 0;
 }
 
+@media screen and (max-width: 320px) {
+    .flower-1 .proInfo{
+        width: 116%;
+        position: absolute;
+        left: -4%;
+        top: 55%;
+        color: #fff;
+        background: rgba(156,172,216,0.57);
+        padding: 10px;
+        line-height: 1.5em;
+        display: none;
+        opacity: 0;
+    }
+}
+
 .proInfo h2{ 
     font-size: 1.6em;
     padding: 6px 0;
@@ -221,7 +236,7 @@ body{
 }
 
 .flower-2 .proInfo{
-    width: 108%;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 100%;
