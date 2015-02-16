@@ -40,6 +40,7 @@ $(".flower-2").click(function(){
     $(this).find(".proInfo").show().stop().animate({"opacity":1,"top":"110%"});
     clcikval = false;
     $(".arr_r").animate({"right":"1%","opacity":1},600);
+    $(".arr_l").animate({"left":"1%","opacity":1},600);
 })
 
 $(".flower-3").click(function(){
@@ -49,6 +50,7 @@ $(".flower-3").click(function(){
     $(this).find(".proInfo").show().stop().animate({"opacity":1,"top":"60%"});
     clcikval = false;
     $(".arr_r").animate({"right":"1%","opacity":1},600);
+    $(".arr_l").animate({"left":"1%","opacity":1},600);
 })
 
 
@@ -59,14 +61,27 @@ $(".flower-3").click(function(){
 
 
 function pageHome(){
+
+    var ani = function(){
+        $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},1000,function(){
+            $(this).hide();
+            $(".pagefooter h2").eq(1).show().stop().animate({"opacity":1,"top":"-25px"},1000,function(){
+                clcikval = true;
+            });
+            $('.hand-action').fadeIn(2000);
+            setTimeout(function(){
+                $(".hand-action").fadeOut(2000);
+            }, 2000);
+        });
+    }
+
 	$("#phone_index").show().stop().animate({"opacity":1},1200,function(){
-		$(".pagefooter h2").eq(0).show().stop().animate({"opacity":1,"top":"-110px"},1200,function(){
-                $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},900,function(){
-                        $(this).hide();
-                        $(".pagefooter h2").eq(1).show().stop().animate({"opacity":1,"top":"-25px"},1000,function(){
-                            clcikval = true;
-                        });
-                })
+		$(".pagefooter h2").eq(0).show().stop().animate({"opacity":1,"top":"-110px"},3000,function(){
+
+          setTimeout(function(){
+            ani();
+          }, 3000);
+
         });
 	});
 	$(".flower-1").show().stop().animate({"opacity":1},1560);
@@ -74,6 +89,11 @@ function pageHome(){
 pageHome();
 
 
+var initFlow = function(){
+    $(".flower_hover").css({"opacity" : 0, "top" : 0});
+    $(".pro").css({"opacity" : 0, "top" : 0});
+    $(".proInfo").css({"opacity" : 0, "top" : 0});
+}
 // function step1Fun(){
 //      $(".pagefooter h2").eq(0).stop().animate({"opacity":0,"top":"-120px"},600,function(){
 // 	    $(this).hide();
@@ -84,12 +104,25 @@ pageHome();
 // 	 });
 // }
 
+function step1Fun(){
+    $(".phonepage").stop().animate({"opacity":0},600,function(){
+        $(this).hide();
+        $(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $("#phone_index").show().stop().animate({"opacity":1},1000);
+        initFlow();
+        $(".flower-1").show().stop().animate({"opacity":1},1560,function(){
+            clcikval = true;
+        });
+    })
+}
 
 function step2Fun(){
 	$(".phonepage").stop().animate({"opacity":0},600,function(){
 		$(this).hide();
 		$(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $(".arr_l").animate({"left":"-10%","opacity":0},600);
 		$("#phone_pro2").show().stop().animate({"opacity":1},1000);
+        initFlow();
 		$(".flower-2").show().stop().animate({"opacity":1},1560,function(){
 			clcikval = true;
 		});
@@ -101,7 +134,9 @@ function step3Fun(){
 	$(".phonepage").stop().animate({"opacity":0},600,function(){
 		$(this).hide();
 		$(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $(".arr_l").animate({"left":"-10%","opacity":0},600);
 		$("#phone_pro3").show().stop().animate({"opacity":1},1000);
+        initFlow();
 		$(".flower-3").show().stop().animate({"opacity":1},1560,function(){
 			clcikval = true;
 		});
@@ -117,6 +152,7 @@ function stepShareFun(){
 		$(this).hide();
 		$("#phone_share").show().stop().animate({"opacity":1},1000);
 		$(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $(".arr_l").animate({"left":"-10%","opacity":0},600);
 	})
 }
 
@@ -126,6 +162,7 @@ function stepDownloadFun(){
 		$(this).hide();
 		$("#phone_download").show().stop().animate({"opacity":1},1000);
 		$(".arr_r").animate({"right":"-10%","opacity":0},600);
+        $(".arr_l").animate({"left":"-10%","opacity":0},600);
 	})
 }
 
@@ -197,6 +234,19 @@ $('.arr_r').on('click', function(){
     }else if(curpageid.attr("id")=="step_share"){
         stepShareFun();
         curpageid.attr("id","");
+    }
+});
+
+$('.arr_l').on('click', function(){
+    var curarr = parseInt($(".arr_r").css("right"));
+    if(curpageid.attr("id")==""||curarr<=0)return false;
+
+    if(curpageid.attr("id")=="step2"){
+        step1Fun();
+        curpageid.attr("id","step0");
+    }else if(curpageid.attr("id")=="step_share"){
+        step2Fun();
+        curpageid.attr("id","step2");
     }
 });
 
@@ -300,9 +350,7 @@ function shareFun(){
   });
 }
 
-setTimeout(function(){
-    $(".hand-action").fadeOut(1000);
-}, 3000);
+
 
 
 
