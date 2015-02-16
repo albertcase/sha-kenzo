@@ -9,17 +9,24 @@
 
         });
         $('.hideRule').on('click', function(){
-
-            $('.rulebox').css('display', 'none');
+            $(".rulebox .con").hide();
+            $(".rulebox").animate({"width": 0, "height": 0, "top": 18, "left": 900}, 500, function() {
+                $('.rulebox').css('display', 'none');
+            });
 
         });
         $('.introduction').animate({"opacity":1}, 3000, function(){
             
-            $(".introduction").animate({"opacity":0}, 3000, function(){
-                
-                $(".introduction1").animate({"opacity":1}, 3000);
+            var introHide = function() {
+                $(".introduction").animate({"opacity":0}, 1000, function(){
+                    $(".rulebox").fadeIn();
+                    $(".introduction1").animate({"opacity":1}, 3000);
 
-            });
+                });
+            }
+            setTimeout(function(){
+                introHide();
+            }, 1000);
 
         }); 
 
