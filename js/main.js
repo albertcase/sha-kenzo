@@ -26,7 +26,7 @@
             }
             setTimeout(function(){
                 introHide();
-            }, 1000);
+            }, 4000);
 
         }); 
 
