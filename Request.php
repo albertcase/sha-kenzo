@@ -26,7 +26,7 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
-			$friendsResult=$c->friends_by_id($_SESSION['oauth2']['user_id'],0,200);
+			$friendsResult=$c->bilateral($_SESSION['oauth2']['user_id'],1,100);
 		    $friendList=array();
 	        if(isset($friendsResult['users'])){
 	            foreach($friendsResult['users'] as $friend){
@@ -95,6 +95,30 @@ if(isset($_POST['model'])){
 			
 			var_dump($_SESSION);
 			break;	
+		case 'search':
+			if(!isset($_SESSION["userId"])){
+				print json_encode(array("code"=>0,"msg"=>"未登录"));
+				exit;
+			}
+			$tag=false;
+			$q=isset($_REQUEST['name'])?$_REQUEST['name']:"";
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+			$friendsResult=$c->search_at_users($q,10);
+			echo "<pre>";
+			print_r($friendsResult);die;
+		    $friendList=array();
+	        if(isset($friendsResult['users'])){
+	            foreach($friendsResult['users'] as $friend){
+	                $friendList[]=array('screen_name'=>$friend['screen_name'],
+	                    'name'=>$friend['name'],
+	                    'profile_image_url'=>$friend['profile_image_url'],
+	                    'avatar_large'=>$friend['avatar_large'],
+	                    'avatar_hd'=>$friend['avatar_hd'],
+	                );
+	            }
+	        }
+			print json_encode(array("code"=>1,"msg"=>$friendList));
+			exit;
 		default:
 			# code...
 			print json_encode(array("code"=>9999,"msg"=>"No Model"));
