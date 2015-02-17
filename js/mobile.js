@@ -199,7 +199,7 @@ function shareFun(){
         type: "POST",
         url: "/Request.php?model=update",
         data: {
-          "content": associatefriend.join("") + sharecontent + shareUrl
+          "content":  sharecontent +associatefriend.join("") + shareUrl
         },
         dataType:"json",
         success: function(data){
