@@ -84,7 +84,7 @@ section p.activity {
     position: absolute;
     top: 0;
     right :0;
-    padding:12px 10px 0 0;
+    padding:8px 10px 0 0;
 
 }
 
@@ -778,10 +778,10 @@ section .con .firstrule span{
 }
 #formval input{
     float:left;
-    margin-top: -45px;
+    margin-top: -50px;
     margin-left: 120px;
     width:250px;
-    height: 20px;
+    height: 25px;
     line-height: 20px;
     font-size: 20px;
     color: #fff;
@@ -960,7 +960,7 @@ section .con .firstrule span{
     font-size: 17px;
     color: #fff;
     position: absolute;
-    top: 540px;
+    top: 536px;
     left: 320px;
     font-weight: normal;
 
@@ -977,7 +977,7 @@ section .con .firstrule span{
     font-size: 17px;
     color: #fff;
     position: absolute;
-    top: 540px;
+    top: 536px;
     left: 470px;
     font-weight: normal;
 
@@ -993,7 +993,7 @@ section .con .firstrule span{
     font-size: 17px;
     color: #fff;
     position: absolute;
-    top: 540px;
+    top: 536px;
     left: 620px;
     font-weight: normal;
 
