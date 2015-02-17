@@ -98,7 +98,7 @@ function downloadPage(){
 function testAnim(eventId,x,heightVal,num) {
     if(num==1){
         $(eventId).removeClass().css({"height":heightVal}).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-              $("#dreambox").addClass("layerblur").stop().animate({"opacity":0.5});
+              $("#dreambox").addClass("layerblur").stop().animate({"opacity":1});
               $(this).removeClass();
         });
     }else{
