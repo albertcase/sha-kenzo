@@ -218,6 +218,26 @@ section .introduction1 span.purple{
     color: #9cacd8;
 }
 
+/* methodbox */
+.methodbox {
+    display: none;
+    width: 846px;
+    height: 460px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 170px;
+    left: 47px;
+    z-index:9999;
+    opacity: 0.95;
+    filter: alpha(opacity=95);    
+    -moz-opacity:0.95;    
+    -khtml-opacity: 0.95;      
+    -webkit-opacity: 0.95;
+    -o-opacity: 0.95;
+    -ms-opacity: 0.95;
+}
 
 
 /* rulebox */
@@ -426,7 +446,7 @@ section .con .firstrule span{
 }
 .purple_con p {
     font-size: 12px;
-    margin: -10px 0px 0px 0px;
+    margin: -12px 0px 0px 0px;
     line-height: 150%;
     font-family: 'Microsoft YaHei';
 
@@ -612,7 +632,7 @@ section .con .firstrule span{
     width: 560px;
     height: 60px;
     display: inline-block;
-    margin: 18px 0 0 0; 
+    margin: 12px 0 0 0; 
     overflow: hidden;
     position: relative;
 }
@@ -1004,6 +1024,43 @@ section .con .firstrule span{
     top: 543px;
     left: 595px;
 }
+#question .method{
+    position:relative; 
+    left:10px;
+    top:4px;
+}
+.methodbox .con h1{
+    font-family: 'Microsoft YaHei';
+    font-size: 25px;
+    color: #000;
+    font-weight: normal;
+}
+.partone {
+    position: absolute;
+    left: 100px;
+    top: 110px;
+    
+}
+.parttwo {
+    position: absolute;
+    left: 500px;
+    top: 110px; 
+    
+}
+
+.methodbox .con p{
+    font-family: 'Microsoft YaHei';
+    font-size: 15px;
+    color: #000;
+    font-weight: normal;
+    text-align: left;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+
+}
+.suojin{
+    margin-left:20px;
+}    
 
 .checkbox { 
     width: 21px; 

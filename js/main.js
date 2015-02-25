@@ -16,6 +16,19 @@
             });
 
         });
+
+        $('.showMethod').on('click', function(){
+            
+            $(".methodbox .con").show();
+            $('.methodbox').css('display', 'block');
+
+        });
+        $('.hideMethod').on('click', function(){
+            $(".methodbox .con").hide();
+            $('.methodbox').css('display', 'none');
+            
+
+        });
         $('.introduction').animate({"opacity":1}, 3000, function(){
             
             var introHide = function() {
