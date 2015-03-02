@@ -310,13 +310,17 @@ function downloadlink(){
     }
      
     if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
-    window.location="https://itunes.apple.com/cn/app/bai-lian-tan-mi/id923966644?mt=8";  //ios链接
+      $(".download_btn").attr("href","https://itunes.apple.com/cn/app/bai-lian-tan-mi/id923966644?mt=8");
+      //window.location="";  //ios链接
     }
     else if (browser.versions.android) {
-    window.location="http://www.ideayes.net/ar.apk";  //安卓链接
+      $(".download_btn").attr("href","http://www.ideayes.net/ar.apk");
+      //window.location="http://www.ideayes.net/ar.apk";  //安卓链接
     }
 
 }
+
+downloadlink()
 
 
 
