@@ -6,7 +6,7 @@ include_once( './sina/config.php' );
 include_once( './sina/saetv2.ex.class.php' );
 if(!isset($_POST['signed_request'])){
 	//非框架
-	Header("Location: http://apps.weibo.com/test/2279946754/H5MH8");
+	Header("Location: http://apps.weibo.com/2279946754/Qp55MH8");
 	exit;
 }
 $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
