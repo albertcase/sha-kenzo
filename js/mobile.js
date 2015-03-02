@@ -217,26 +217,6 @@ function shareFun(){
 
 
 
-
-/*function isloginFun(){
-  $.ajax({
-    type: "POST",
-    url: "/valentine/Request.php?model=islogin",
-    data: {
-      "city": curcityIndex
-    },
-    dataType:"json",
-    success: function(msg){
-      storesHtml = $.map(msg.msg,function(key){
-          return "<option value='"+key.id+"' title='"+key.address+"<br />"+key.telphone+"'>"+key.name+"</option>";
-      }).join("")
-      $("#stores").html(storesHtml);
-    }
-  });
-}*/
-
-
-
 /* 下载地址 */
 function downloadlink(){
     var browser = {
@@ -295,6 +275,40 @@ touch.on('body', 'swipeleft', function(){
     }); 
   }
 });
+
+
+
+
+
+/* 登陆判断 */
+
+function isloginFun(){
+  $.ajax({
+    type: "POST",
+    url: "/Request.php?model=islogin",
+    dataType:"json",
+    success: function(data){
+        if(data.code == 0){
+            window.location.href="/Request.php?model=/ipad";
+        }else{
+
+        }
+    }
+  });
+}
+
+isloginFun()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
