@@ -92,8 +92,8 @@ if(isset($_POST['model'])){
 			exit;
 			break;
 		case 'test':
-			
-			var_dump($_SESSION);
+			echo "<pre>";
+			print_r($_SESSION);
 			break;	
 		case 'search':
 			if(!isset($_SESSION["userId"])){
