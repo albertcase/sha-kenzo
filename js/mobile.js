@@ -1,3 +1,4 @@
+
 ;(function($){
     $(function(){
 
@@ -215,39 +216,6 @@ function shareFun(){
 
 
 
-
-
-/* 下载地址 */
-function downloadlink(){
-    var browser = {
-    versions: function() {
-    var u = navigator.userAgent, app = navigator.appVersion;
-    return {//移动终端浏览器版本信息 
-    trident: u.indexOf('Trident') > -1, //IE内核
-    presto: u.indexOf('Presto') > -1, //opera内核
-    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
-    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
-    iPad: u.indexOf('iPad') > -1, //是否iPad
-    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
-    };
-    }(),
-    language: (navigator.browserLanguage || navigator.language).toLowerCase()
-    }
-     
-    if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
-    window.location="https://itunes.apple.com/cn/app/bai-lian-tan-mi/id923966644?mt=8";  //ios链接
-    }
-    else if (browser.versions.android) {
-    window.location="http://www.ideayes.net/ar.apk";  //安卓链接
-    }
-
-}
-
-
 /* 手机滑动效果js */
 
 touch.on('body', 'swipeleft', function(){
@@ -280,7 +248,45 @@ touch.on('body', 'swipeleft', function(){
 
 
 
-/* 登陆判断 */
+
+/* 下载地址 */
+function downloadlink(){
+    var browser = {
+    versions: function() {
+    var u = navigator.userAgent, app = navigator.appVersion;
+    return {//移动终端浏览器版本信息 
+    trident: u.indexOf('Trident') > -1, //IE内核
+    presto: u.indexOf('Presto') > -1, //opera内核
+    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+    mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+    iPad: u.indexOf('iPad') > -1, //是否iPad
+    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+    };
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+     
+    if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+      $(".download_btn").attr("href","https://itunes.apple.com/cn/app/bai-lian-tan-mi/id923966644?mt=8");
+      //window.location="";  //ios链接
+    }
+    else if (browser.versions.android) {
+      $(".download_btn").attr("href","http://www.ideayes.net/ar.apk");
+      //window.location="http://www.ideayes.net/ar.apk";  //安卓链接
+    }
+
+}
+
+downloadlink()
+
+
+
+
+/* 登陆判断 
 
 function isloginFun(){
   $.ajax({
@@ -291,14 +297,14 @@ function isloginFun(){
         if(data.code == 0){
             window.location.href="/Request.php?model=/ipad";
         }else{
-
+            
         }
     }
   });
 }
 
 isloginFun()
-
+*/
 
 
 
