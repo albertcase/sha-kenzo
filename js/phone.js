@@ -355,7 +355,24 @@ function shareFun(){
 
 
 
+/* 登陆判断 */
 
+function isloginFun(){
+  $.ajax({
+    type: "POST",
+    url: "/Request.php?model=islogin",
+    dataType:"json",
+    success: function(data){
+        if(data.code == 0){
+            window.location.href="/Request.php?model=/mobile";
+        }else{
+            
+        }
+    }
+  });
+}
+
+isloginFun()
 
 
 

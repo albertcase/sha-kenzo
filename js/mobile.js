@@ -291,7 +291,7 @@ function isloginFun(){
         if(data.code == 0){
             window.location.href="/Request.php?model=/ipad";
         }else{
-
+            
         }
     }
   });
