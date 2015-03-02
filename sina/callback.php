@@ -4,7 +4,6 @@ include_once('../config/database.php');
 include_once('../config/Pdb.php');
 include_once( 'config.php' );
 include_once( 'saetv2.ex.class.php' );
-
 $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
 
 if (isset($_REQUEST['code'])) {
@@ -19,7 +18,7 @@ if (isset($_REQUEST['code'])) {
 
 if ($token) {
 	$_SESSION['token'] = $token;
-	$_SESSION['oauth2']['access_token']=$_SESSION['token']['access_token'];
+	$_SESSION['access_token']=$_SESSION['token']['access_token'];
 	setcookie( 'weibojs_'.$o->client_id, http_build_query($token) );
 	$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
 	$ms  = $c->home_timeline(); // done
@@ -28,6 +27,7 @@ if ($token) {
 	$user_message = $c->show_user_by_id( $uid);//根据ID获取用户等基本信息
 	$db=Pdb::getDb();
 	$rs=$db->getOne("select id from same_weibo_user where weiboid='".$uid."'");
+
 	if($rs){
 		$_SESSION['userId']=$rs;
 	}else{
@@ -38,7 +38,16 @@ if ($token) {
 		$db->execute($sql);
 		$_SESSION['userId']=$db->lastInsertId;
 	}
-	header("Location: ".$_SESSION["callback_url"]);
+	if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+		if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
+		 	$url="/ipad";
+		}else{
+		 	$url="/mobile";
+		}
+	}else{
+		$url="/pc";
+	}
+	header("Location: ".$url);
 	exit;
 ?>
 <!--
