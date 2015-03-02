@@ -355,7 +355,7 @@ function shareFun(){
 
 
 
-/* 登陆判断 */
+/* 登陆判断 
 
 function isloginFun(){
   $.ajax({
@@ -373,6 +373,6 @@ function isloginFun(){
 }
 
 isloginFun()
-
+*/
 
 

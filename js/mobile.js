@@ -280,7 +280,7 @@ touch.on('body', 'swipeleft', function(){
 
 
 
-/* 登陆判断 */
+/* 登陆判断 
 
 function isloginFun(){
   $.ajax({
@@ -298,7 +298,7 @@ function isloginFun(){
 }
 
 isloginFun()
-
+*/
 
 
 
