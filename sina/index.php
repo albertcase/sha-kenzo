@@ -3,12 +3,13 @@ session_start();
 
 include_once( 'config.php' );
 include_once( 'saetv2.ex.class.php' );
-
+$_SESSION['callback_url']=isset($_REQUEST['callback'])?$_REQUEST['callback']:"/";
 $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
 
 $code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
-
+header("Location: $code_url");
 ?>
+<!--
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -28,8 +29,8 @@ $code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
 	<p>SAE采用“所付即所用，所付仅所用”的计费理念，通过日志和统计中心精确的计算每个应用的资源消耗，进行精确计费。并且SAE会对通过实名认证的开发者赠送免费额度，使开发者可以零成本创业。</p>
 	<p>总而言之，SAE就是简单高效的分布式web服务开发、运行平台。</p>
 	<p>更多SAE相关内容，请点击 <a href="http://sae.sina.com.cn/?m=devcenter" target="_blank">http://sae.sina.com.cn/?m=devcenter</a> 。</p>
-	<!-- 授权按钮 -->
     <p><a href="<?=$code_url?>"><img src="weibo_login.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a></p>
 
 </body>
 </html>
+-->
