@@ -123,7 +123,7 @@ function isloginFun(){
     dataType:"json",
     success: function(data){
         if(data.code == 0){
-            window.location.href="/sina?callback="+encodeURIComponent("/pc?reback=sharelist");
+            window.location.href="/sina?callback="+encodeURIComponent("/pc/share.html?reback=sharelist");
         }else{
            loadfriendFun();
             
