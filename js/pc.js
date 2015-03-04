@@ -116,23 +116,8 @@ function shareFun(){
 }
  //登陆判断 
 
-function isloginFun(){
-  $.ajax({
-    type: "POST",
-    url: "/Request.php?model=islogin",
-    dataType:"json",
-    success: function(data){
-        if(data.code == 0){
-            window.location.href="/sina?callback="+encodeURIComponent("/pc/share.html?reback=sharelist");
-        }else{
-           loadfriendFun();
-            
-        }
-    }
-  });
-}
 
-isloginFun();
+
 
 
 function GetQueryString(name)
@@ -145,7 +130,6 @@ function GetQueryString(name)
 if(GetQueryString("reback")=="sharelist"){
     loadfriendFun();
 }
-
 
 
 

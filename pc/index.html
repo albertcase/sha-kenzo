@@ -128,14 +128,36 @@
        
 
     
-    <a id="nav-right-btn" class="nav-btn" href="share.html">
+    <a id="nav-right-btn" class="nav-btn" href="javasrcipt:isloginFun();">
         <img src="/images/right-btn.png" width="28" height="90">
     </a>
    
 </section>
+<script type="text/javascript" src="/js/pc.js"></script>
 <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=44377051" type="text/javascript" charset="utf-8"></script>
 <script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/frame/appclient.js" charset="utf-8"></script>   
 <script>
+
+
+function isloginFun(){
+  $.ajax({
+    type: "POST",
+    url: "/Request.php?model=islogin",
+    dataType:"json",
+    success: function(data){
+        if(data.code == 0){
+            window.location.href="/sina?callback="+encodeURIComponent("/pc/share.html?reback=sharelist");
+        }else{
+           
+           window.location.href="/pc/share.html?reback=sharelist";
+            
+        }
+    }
+  });
+}
+
+
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -143,6 +165,13 @@
 
   ga('create', 'UA-59619376-1', 'auto');
   ga('send', 'pageview');
+
+
+
+
+
+
+
 
 </script>
 
