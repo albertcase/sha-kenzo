@@ -47,7 +47,8 @@ if ($token) {
 	}else{
 		$url="/pc";
 	}
-	header("Location: ".$url);
+	$redirect_uri=isset($_SESSION['callback_url'])?$_SESSION['callback_url']:$url;
+	header("Location: ".$redirect_uri);
 	exit;
 ?>
 <!--
