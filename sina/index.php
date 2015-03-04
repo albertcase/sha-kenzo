@@ -3,7 +3,16 @@ session_start();
 
 include_once( 'config.php' );
 include_once( 'saetv2.ex.class.php' );
-$_SESSION['callback_url']=isset($_REQUEST['callback'])?$_REQUEST['callback']:"/";
+if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+	if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
+	 	$url="/ipad";
+	}else{
+	 	$url="/mobile";
+	}
+}else{
+	$url="/pc";
+}
+$_SESSION['callback_url']=isset($_REQUEST['callback'])?$_REQUEST['callback']:$url;
 $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
 
 $code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );

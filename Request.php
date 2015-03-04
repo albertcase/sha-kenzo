@@ -6,6 +6,7 @@ include_once('./config/getIpClass.php');
 include_once('./sina/config.php' );
 include_once('./sina/saetv2.ex.class.php' );
 $_POST=$_REQUEST;
+$_SESSION['access_token']=isset($_SESSION['oauth2']['oauth_token'])?$_SESSION['oauth2']['oauth_token']:$_SESSION['token']['access_token'];
 $db=Pdb::getDb();
 if(isset($_POST['model'])){
 	switch ($_POST['model']) {
@@ -25,7 +26,7 @@ if(isset($_POST['model'])){
 				print json_encode(array("code"=>0,"msg"=>"未登录"));
 				exit;
 			}
-			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['access_token'] );
 			$friendsResult=$c->bilateral($_SESSION['oauth2']['user_id'],1,100);
 		    $friendList=array();
 	        if(isset($friendsResult['users'])){
@@ -47,8 +48,19 @@ if(isset($_POST['model'])){
 				exit;
 			}
 			$txt=isset($_POST['content'])?$_POST['content']:"测试文案";
-			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['access_token'] );
 			$ret=$c->update($txt);
+			if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+				if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
+				 	$ref="ipad";
+				}else{
+				 	$ref="mobile";
+				}
+			}else{
+				$ref="pc";
+			}
+			$sql="insert into  same_weibo_share set userId=".$db->quote($_SESSION["userId"]).",ref=".$db->quote($ref);
+			$db->execute($sql);
 			if ( isset($ret['error_code']) && $ret['error_code'] > 0 ) {
 				print json_encode(array("code"=>2,"msg"=>"发送失败","rs"=>$ret));
 			} else {
@@ -63,7 +75,7 @@ if(isset($_POST['model'])){
 			}
 			$txt=isset($_POST['content'])?$_POST['content']:"测试文案";
 			$pic=isset($_POST['pic'])?$_POST['pic']:"test.jpg";
-			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['access_token'] );
 			$ret=$c->upload($txt,$pic);
 			if ( isset($ret['error_code']) && $ret['error_code'] > 0 ) {
 				print json_encode(array("code"=>2,"msg"=>"发送失败","rs"=>$ret));
@@ -102,7 +114,7 @@ if(isset($_POST['model'])){
 			}
 			$tag=false;
 			$q=isset($_REQUEST['name'])?$_REQUEST['name']:"";
-			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['access_token'] );
 			$friendsResult=$c->search_at_users($q,10);
 			echo "<pre>";
 			print_r($friendsResult);die;
