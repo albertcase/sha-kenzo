@@ -234,7 +234,7 @@ $('.arr_r').on('click', function(){
         step3Fun();
         curpageid.attr("id","step_share");
     }else if(curpageid.attr("id")=="step_share"){
-        stepShareFun();
+        isloginFun();
         curpageid.attr("id","");
     }
 });
@@ -359,7 +359,8 @@ function shareFun(){
 
 
 
-/* 登陆判断 
+
+ //登陆判断 
 
 function isloginFun(){
   $.ajax({
@@ -368,7 +369,7 @@ function isloginFun(){
     dataType:"json",
     success: function(data){
         if(data.code == 0){
-            window.location.href="/Request.php?model=/mobile";
+            window.location.href="/sina?callback="+encodeURIComponent("/mobile?reback=sharelist");
         }else{
             
         }
@@ -377,6 +378,17 @@ function isloginFun(){
 }
 
 isloginFun()
-*/
+
+
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+if(GetQueryString("reback")=="sharelist"){
+    stepShareFun();
+}
 
 
