@@ -377,8 +377,6 @@ function isloginFun(){
   });
 }
 
-isloginFun()
-
 
 function GetQueryString(name)
 {

@@ -6,6 +6,23 @@ include_once( './sina/config.php' );
 include_once( './sina/saetv2.ex.class.php' );
 if(!isset($_POST['signed_request'])){
 	//非框架
+	/*
+	if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+		if(stripos($_SERVER['HTTP_USER_AGENT'],"Safari")){
+			Header("Location: /sina");
+			exit;
+		}
+	}
+	*/
+	if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+		if(stripos($_SERVER['HTTP_USER_AGENT'],"Safari")){
+			if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
+			 	Header("Location:/ipad");
+			}else{
+			 	Header("Location:/mobile");
+			}
+		}		
+	}
 	Header("Location: http://apps.weibo.com/2279946754/Qp55MH8");
 	exit;
 }
@@ -17,7 +34,24 @@ if($data == '-2'){
 	$_SESSION['oauth2'] = $data;
 }
 //授权完成 查询用户是否存在
-$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+
+if(!isset($_SESSION['oauth2']['oauth_token'])){
+	if(!isset($_SESSION['token']['access_token'])){
+		//Header("Location: /sina");
+		if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
+			if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
+			 	Header("Location:/ipad");
+			}else{
+			 	Header("Location:/mobile");
+			}
+		}else{
+			Header("Location:/pc");
+		}
+	}else
+		$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token']);
+}else{
+	$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['oauth2']['oauth_token'] );
+}
 $ms  = $c->home_timeline(); // done
 $uid_get = $c->get_uid();
 $uid = $uid_get['uid'];
