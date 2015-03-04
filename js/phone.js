@@ -371,7 +371,7 @@ function isloginFun(){
         if(data.code == 0){
             window.location.href="/sina?callback="+encodeURIComponent("/mobile?reback=sharelist");
         }else{
-            
+            stepShareFun();
         }
     }
   });

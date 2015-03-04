@@ -297,13 +297,12 @@ function isloginFun(){
         if(data.code == 0){
             window.location.href="/sina?callback="+encodeURIComponent("/ipad?reback=sharelist");
         }else{
-            
+            sharePage()
         }
     }
   });
 }
 
-isloginFun()
 
 
 function GetQueryString(name)
