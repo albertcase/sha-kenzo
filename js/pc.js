@@ -1,13 +1,3 @@
-
-
-
-loadfriendFun();
-
-
-
-
-
-
 function testAnim(eventId,x,heightVal,num) {
     if(num==1){
         $(eventId).removeClass().css({"height":heightVal}).addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -35,6 +25,9 @@ function run(moveDirection){
         $(".friendlist_con ul:not(:animated)").stop().animate({"left":curleft-movewidth*8});
     } 
 }
+
+
+
 
 
 
@@ -120,6 +113,36 @@ function shareFun(){
       });
   
   
+}
+ //登陆判断 
+
+function isloginFun(){
+  $.ajax({
+    type: "POST",
+    url: "/Request.php?model=islogin",
+    dataType:"json",
+    success: function(data){
+        if(data.code == 0){
+            window.location.href="/sina?callback="+encodeURIComponent("/pc?reback=sharelist");
+        }else{
+            
+        }
+    }
+  });
+}
+
+isloginFun();
+
+
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+if(GetQueryString("reback")=="sharelist"){
+    loadfriendFun();
 }
 
 

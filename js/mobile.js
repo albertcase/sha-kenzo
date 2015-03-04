@@ -286,7 +286,7 @@ downloadlink()
 
 
 
-/* 登陆判断 
+ //登陆判断 
 
 function isloginFun(){
   $.ajax({
@@ -295,20 +295,26 @@ function isloginFun(){
     dataType:"json",
     success: function(data){
         if(data.code == 0){
-            window.location.href="/Request.php?model=/ipad";
+            window.location.href="/sina?callback="+encodeURIComponent("/ipad?reback=sharelist");
         }else{
-            
+            sharePage()
         }
     }
   });
 }
 
-isloginFun()
-*/
 
 
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
 
-
+if(GetQueryString("reback")=="sharelist"){
+    sharePage()
+}
 
 
 
