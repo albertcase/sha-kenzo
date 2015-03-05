@@ -106,7 +106,12 @@ if(isset($_POST['model'])){
 		case 'test':
 			echo "<pre>";
 			print_r($_SESSION);
-			break;	
+			break;
+		case 'geturl':
+			$url=$_REQUEST["url"];
+			$sql="insert into  urltable set url=".$db->quote($url);
+			$db->execute($sql);
+			break;
 		case 'search':
 			if(!isset($_SESSION["userId"])){
 				print json_encode(array("code"=>0,"msg"=>"未登录"));

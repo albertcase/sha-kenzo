@@ -15,13 +15,15 @@ if(!isset($_POST['signed_request'])){
 	}
 	*/
 	if(stripos($_SERVER['HTTP_USER_AGENT'],"Mobile")){
-		if(stripos($_SERVER['HTTP_USER_AGENT'],"Safari")){
+		//if(stripos($_SERVER['HTTP_USER_AGENT'],"Safari")){
 			if(stripos($_SERVER['HTTP_USER_AGENT'],"iPad")){
 			 	Header("Location:/ipad");
+			 	exit;
 			}else{
 			 	Header("Location:/mobile");
+			 	exit;
 			}
-		}		
+		//}		
 	}
 	Header("Location: http://apps.weibo.com/2279946754/Qp55MH8");
 	exit;
